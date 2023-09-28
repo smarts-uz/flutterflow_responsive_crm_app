@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "317200515163",
+    "project_id": "responsive-crm-flutterflow",
+    "storage_bucket": "responsive-crm-flutterflow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317200515163:android:733bc0062d2785902bff7e",
+        "android_client_info": {
+          "package_name": "uz.smarts.crmapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhjJo9iMpsFY44cSiuiXAHHAOKAFDH1JU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
