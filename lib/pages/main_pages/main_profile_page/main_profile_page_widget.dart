@@ -1123,9 +1123,15 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                         onPressed: () async {
                                           logFirebaseEvent(
                                               'MAIN_PROFILE_LOG_OUT_BTN_ON_TAP');
+                                          GoRouter.of(context)
+                                              .prepareAuthEvent();
+                                          await authManager.signOut();
+                                          GoRouter.of(context)
+                                              .clearRedirectLocation();
 
-                                          context.pushNamed(
+                                          context.pushNamedAuth(
                                             'auth_Login',
+                                            context.mounted,
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
                                                   TransitionInfo(
