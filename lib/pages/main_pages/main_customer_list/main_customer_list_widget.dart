@@ -1377,7 +1377,6 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                 0,
                                                 70.0,
                                               ),
-                                              primary: false,
                                               shrinkWrap: true,
                                               scrollDirection: Axis.vertical,
                                               itemCount:
@@ -1925,7 +1924,6 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                 0,
                                                 70.0,
                                               ),
-                                              primary: false,
                                               shrinkWrap: true,
                                               scrollDirection: Axis.vertical,
                                               itemCount:
