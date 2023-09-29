@@ -708,8 +708,10 @@ class _ModalShareProjectWidgetState extends State<ModalShareProjectWidget>
                               Align(
                                 alignment: AlignmentDirectional(0.00, 0.05),
                                 child: FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
+                                  onPressed: () async {
+                                    logFirebaseEvent(
+                                        'MODAL_SHARE_PROJECT_CANCEL_BTN_ON_TAP');
+                                    context.safePop();
                                   },
                                   text: FFLocalizations.of(context).getText(
                                     'jz45d8an' /* Cancel */,

@@ -1,6 +1,7 @@
 import '/backend/supabase/supabase.dart';
 import '/components/dropdown_user_edit/dropdown_user_edit_widget.dart';
 import '/components/modals/command_palette/command_palette_widget.dart';
+import '/components/modals/create_customer/create_customer_widget.dart';
 import '/components/modals_extra/modal_share_project/modal_share_project_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -475,6 +476,45 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                               ),
                             ),
                           ),
+                        Builder(
+                          builder: (context) => FlutterFlowIconButton(
+                            borderColor: FlutterFlowTheme.of(context).primary,
+                            borderRadius: 12.0,
+                            borderWidth: 2.0,
+                            fillColor: FlutterFlowTheme.of(context).accent1,
+                            icon: Icon(
+                              Icons.add,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 24.0,
+                            ),
+                            onPressed: () async {
+                              logFirebaseEvent(
+                                  'MAIN_CUSTOMER_LIST_PAGE_add_ICN_ON_TAP');
+                              await showAlignedDialog(
+                                context: context,
+                                isGlobal: true,
+                                avoidOverflow: false,
+                                targetAnchor: AlignmentDirectional(0.0, 0.0)
+                                    .resolve(Directionality.of(context)),
+                                followerAnchor: AlignmentDirectional(0.0, 0.0)
+                                    .resolve(Directionality.of(context)),
+                                builder: (dialogContext) {
+                                  return Material(
+                                    color: Colors.transparent,
+                                    child: GestureDetector(
+                                      onTap: () => _model
+                                              .unfocusNode.canRequestFocus
+                                          ? FocusScope.of(context)
+                                              .requestFocus(_model.unfocusNode)
+                                          : FocusScope.of(context).unfocus(),
+                                      child: CreateCustomerWidget(),
+                                    ),
+                                  );
+                                },
+                              ).then((value) => setState(() {}));
+                            },
+                          ),
+                        ),
                         FlutterFlowIconButton(
                           borderColor: Colors.transparent,
                           borderRadius: 30.0,
