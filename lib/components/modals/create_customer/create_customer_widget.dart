@@ -128,7 +128,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'kl6wy2jo' /* Name */,
+                                        'jn3h4ll8' /* Name */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -195,7 +195,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'mapukmzw' /* Title */,
+                                        'nsythw6u' /* Title */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -262,7 +262,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'pb4xu9x4' /* Company */,
+                                        'c0xxht2v' /* Company */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -328,10 +328,10 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                             FormFieldController<String>(null),
                                     options: [
                                       FFLocalizations.of(context).getText(
-                                        'at1y9l31' /* New */,
+                                        'nm2sibzb' /* New */,
                                       ),
                                       FFLocalizations.of(context).getText(
-                                        '16ltihdd' /* Contacted */,
+                                        'rd4u3bnd' /* Contacted */,
                                       )
                                     ],
                                     onChanged: (val) => setState(
@@ -342,7 +342,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                         FlutterFlowTheme.of(context).bodyMedium,
                                     hintText:
                                         FFLocalizations.of(context).getText(
-                                      'y6tg15ms' /* Please select... */,
+                                      'gclvpn85' /* Please select... */,
                                     ),
                                     icon: Icon(
                                       Icons.keyboard_arrow_down_rounded,

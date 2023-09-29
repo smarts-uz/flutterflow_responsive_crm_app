@@ -1,3 +1,4 @@
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +8,12 @@ import 'dropdown_user_edit_model.dart';
 export 'dropdown_user_edit_model.dart';
 
 class DropdownUserEditWidget extends StatefulWidget {
-  const DropdownUserEditWidget({Key? key}) : super(key: key);
+  const DropdownUserEditWidget({
+    Key? key,
+    required this.id,
+  }) : super(key: key);
+
+  final int? id;
 
   @override
   _DropdownUserEditWidgetState createState() => _DropdownUserEditWidgetState();
@@ -240,55 +246,72 @@ class _DropdownUserEditWidgetState extends State<DropdownUserEditWidget> {
                   MouseRegion(
                     opaque: false,
                     cursor: MouseCursor.defer ?? MouseCursor.defer,
-                    child: AnimatedContainer(
-                      duration: Duration(milliseconds: 150),
-                      curve: Curves.easeInOut,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: _model.mouseRegionHovered4!
-                            ? FlutterFlowTheme.of(context).primaryBackground
-                            : FlutterFlowTheme.of(context).secondaryBackground,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(4.0),
-                          bottomRight: Radius.circular(4.0),
-                          topLeft: Radius.circular(0.0),
-                          topRight: Radius.circular(0.0),
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        logFirebaseEvent(
+                            'DROPDOWN_USER_EDIT_COMP_component_ON_TAP');
+                        await CustomersTable().delete(
+                          matchingRows: (rows) => rows.eq(
+                            'id',
+                            widget.id,
+                          ),
+                        );
+                      },
+                      child: AnimatedContainer(
+                        duration: Duration(milliseconds: 150),
+                        curve: Curves.easeInOut,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: _model.mouseRegionHovered4!
+                              ? FlutterFlowTheme.of(context).primaryBackground
+                              : FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(4.0),
+                            bottomRight: Radius.circular(4.0),
+                            topLeft: Radius.circular(0.0),
+                            topRight: Radius.circular(0.0),
+                          ),
                         ),
-                      ),
-                      child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 0.0, 0.0),
-                              child: Icon(
-                                Icons.delete_outline_rounded,
-                                color: FlutterFlowTheme.of(context).error,
-                                size: 20.0,
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 8.0, 0.0, 8.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 0.0, 0.0),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    '9qkfsg85' /* Delete */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Plus Jakarta Sans',
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
-                                      ),
+                                child: Icon(
+                                  Icons.delete_outline_rounded,
+                                  color: FlutterFlowTheme.of(context).error,
+                                  size: 20.0,
                                 ),
                               ),
-                            ),
-                          ],
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      12.0, 0.0, 0.0, 0.0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      '9qkfsg85' /* Delete */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Plus Jakarta Sans',
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                        ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
