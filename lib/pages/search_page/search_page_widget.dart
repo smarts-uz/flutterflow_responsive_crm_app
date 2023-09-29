@@ -123,7 +123,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: FFLocalizations.of(context).getText(
-                                  '788ep8j0' /* Search... */,
+                                  'dcogaywy' /* Search... */,
                                 ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
