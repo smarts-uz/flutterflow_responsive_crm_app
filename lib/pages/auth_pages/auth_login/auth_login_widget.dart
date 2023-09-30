@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -702,26 +703,37 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 8.0, 8.0),
-                                    child: Container(
-                                      width: 50.0,
-                                      height: 50.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .accent1,
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        logFirebaseEvent(
+                                            'AUTH_LOGIN_Container_fxshfyvv_ON_TAP');
+                                        await actions.signInWithGoogle();
+                                      },
+                                      child: Container(
+                                        width: 50.0,
+                                        height: 50.0,
+                                        decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          width: 2.0,
+                                              .accent1,
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            width: 2.0,
+                                          ),
                                         ),
-                                      ),
-                                      alignment:
-                                          AlignmentDirectional(0.00, 0.00),
-                                      child: FaIcon(
-                                        FontAwesomeIcons.google,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        size: 24.0,
+                                        alignment:
+                                            AlignmentDirectional(0.00, 0.00),
+                                        child: FaIcon(
+                                          FontAwesomeIcons.google,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          size: 24.0,
+                                        ),
                                       ),
                                     ).animateOnPageLoad(animationsMap[
                                         'containerOnPageLoadAnimation1']!),
