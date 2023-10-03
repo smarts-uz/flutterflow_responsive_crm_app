@@ -692,6 +692,23 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                                 CrossAxisAlignment
                                                                     .center,
                                                             children: [
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            16.0,
+                                                                            0.0),
+                                                                child: Text(
+                                                                  listViewCustomersRow
+                                                                      .id
+                                                                      .toString(),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
+                                                                ),
+                                                              ),
                                                               ClipRRect(
                                                                 borderRadius:
                                                                     BorderRadius
@@ -1229,6 +1246,23 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                                 CrossAxisAlignment
                                                                     .center,
                                                             children: [
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            16.0,
+                                                                            0.0),
+                                                                child: Text(
+                                                                  listViewCustomersRow
+                                                                      .id
+                                                                      .toString(),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
+                                                                ),
+                                                              ),
                                                               ClipRRect(
                                                                 borderRadius:
                                                                     BorderRadius
@@ -1766,6 +1800,23 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                                 CrossAxisAlignment
                                                                     .center,
                                                             children: [
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            16.0,
+                                                                            0.0),
+                                                                child: Text(
+                                                                  listViewCustomersRow
+                                                                      .id
+                                                                      .toString(),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
+                                                                ),
+                                                              ),
                                                               ClipRRect(
                                                                 borderRadius:
                                                                     BorderRadius
