@@ -4181,6 +4181,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'نوٹ بنائیں',
     },
   },
+  // DeleteConfirmationDialog
+  {
+    'ua2ij2a3': {
+      'en': 'Are you sure to delete this customer?',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
+    'gl7isg02': {
+      'en': 'No',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
+    'tghlacs1': {
+      'en': 'Yes',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
+  },
   // Miscellaneous
   {
     '0nwoj0kc': {
