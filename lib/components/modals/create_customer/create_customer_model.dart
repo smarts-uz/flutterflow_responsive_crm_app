@@ -1,5 +1,6 @@
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -19,7 +20,7 @@ class CreateCustomerModel extends FlutterFlowModel<CreateCustomerWidget> {
   String? _textController1Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '70qvcsry' /* Field is required */,
+        '2l1x5k4v' /* Field is required */,
       );
     }
 
@@ -32,7 +33,7 @@ class CreateCustomerModel extends FlutterFlowModel<CreateCustomerWidget> {
   String? _textController2Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '2l1x5k4v' /* Field is required */,
+        '70qvcsry' /* Field is required */,
       );
     }
 

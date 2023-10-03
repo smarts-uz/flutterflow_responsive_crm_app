@@ -4590,8 +4590,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'గమనికను సృష్టించండి',
       'ur': 'نوٹ بنائیں',
     },
-    'jn3h4ll8': {
-      'en': 'Name',
+    'nsythw6u': {
+      'en': 'Title',
       'bn': '',
       'hi': '',
       'ml': '',
@@ -4600,8 +4600,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'nsythw6u': {
-      'en': 'Title',
+    'jn3h4ll8': {
+      'en': 'Name',
       'bn': '',
       'hi': '',
       'ml': '',

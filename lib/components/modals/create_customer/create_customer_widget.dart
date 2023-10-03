@@ -1,5 +1,6 @@
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -101,12 +102,37 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              16.0, 12.0, 0.0, 0.0),
-                          child: Text(
-                            FFLocalizations.of(context).getText(
-                              'w3362kcj' /* Create Customer */,
-                            ),
-                            style: FlutterFlowTheme.of(context).headlineSmall,
+                              16.0, 12.0, 16.0, 0.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                FFLocalizations.of(context).getText(
+                                  'w3362kcj' /* Create Customer */,
+                                ),
+                                style:
+                                    FlutterFlowTheme.of(context).headlineSmall,
+                              ),
+                              FlutterFlowIconButton(
+                                borderColor:
+                                    FlutterFlowTheme.of(context).alternate,
+                                borderRadius: 12.0,
+                                borderWidth: 2.0,
+                                fillColor: FlutterFlowTheme.of(context).accent4,
+                                icon: Icon(
+                                  Icons.close_rounded,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 24.0,
+                                ),
+                                onPressed: () async {
+                                  logFirebaseEvent(
+                                      'CREATE_CUSTOMER_close_rounded_ICN_ON_TAP');
+                                  context.safePop();
+                                },
+                              ),
+                            ],
                           ),
                         ),
                         Form(
@@ -128,7 +154,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'jn3h4ll8' /* Name */,
+                                        'nsythw6u' /* Title */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -195,7 +221,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'nsythw6u' /* Title */,
+                                        'jn3h4ll8' /* Name */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -389,8 +415,8 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     return;
                                   }
                                   await CustomersTable().insert({
-                                    'name': _model.textController1.text,
-                                    'title': _model.textController2.text,
+                                    'name': _model.textController2.text,
+                                    'title': _model.textController1.text,
                                     'company': _model.textController3.text,
                                     'status': _model.dropDownValue,
                                   });
