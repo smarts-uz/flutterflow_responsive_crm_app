@@ -123,7 +123,7 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                   logFirebaseEvent('MOBILE_NAV_COMP_Column_t87ij4ed_ON_TAP');
 
                   context.pushNamed(
-                    'Main_messages',
+                    'Main_customerList',
                     extra: <String, dynamic>{
                       kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
@@ -143,7 +143,7 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
-                          't5c3aiuy' /* My Team */,
+                          't5c3aiuy' /* Customers */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Plus Jakarta Sans',
@@ -165,7 +165,7 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                   logFirebaseEvent('MOBILE_NAV_COMP_Column_5root8xc_ON_TAP');
 
                   context.pushNamed(
-                    'Main_customerList',
+                    'Main_companiesList',
                     extra: <String, dynamic>{
                       kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
@@ -179,13 +179,17 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    widget.iconTwo!,
+                    Icon(
+                      Icons.business_rounded,
+                      color: FlutterFlowTheme.of(context).secondaryText,
+                      size: 28.0,
+                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
-                          'nkz3c58a' /* Customers */,
+                          'nkz3c58a' /* Companies */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Plus Jakarta Sans',
@@ -221,7 +225,11 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    widget.iconThree!,
+                    Icon(
+                      Icons.document_scanner_rounded,
+                      color: FlutterFlowTheme.of(context).secondaryText,
+                      size: 28.0,
+                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),

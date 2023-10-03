@@ -1,5 +1,5 @@
+import '/components/command_palette/command_palette_widget.dart';
 import '/components/modal_sections/modal_project_details/modal_project_details_widget.dart';
-import '/components/modals/command_palette/command_palette_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';

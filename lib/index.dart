@@ -24,3 +24,5 @@ export '/pages/project_details/project_details_widget.dart'
 export '/pages/search_page/search_page_widget.dart' show SearchPageWidget;
 export '/pages/messages_details/messages_details_widget.dart'
     show MessagesDetailsWidget;
+export '/pages/main_pages/main_companies_list/main_companies_list_widget.dart'
+    show MainCompaniesListWidget;

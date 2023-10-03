@@ -1,5 +1,5 @@
 import '/auth/supabase_auth/auth_util.dart';
-import '/components/modals/command_palette/command_palette_widget.dart';
+import '/components/command_palette/command_palette_widget.dart';
 import '/components/modals_extra/modal_profile_edit/modal_profile_edit_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';

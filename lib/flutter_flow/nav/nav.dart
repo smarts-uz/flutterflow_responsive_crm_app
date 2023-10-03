@@ -168,6 +168,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'messagesDetails',
               path: 'messagesDetails',
               builder: (context, params) => MessagesDetailsWidget(),
+            ),
+            FFRoute(
+              name: 'Main_companiesList',
+              path: 'mainCompaniesList',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_companiesList')
+                  : MainCompaniesListWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

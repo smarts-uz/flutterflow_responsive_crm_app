@@ -11,7 +11,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/actions/actions.dart' as action_blocks;
-import 'main_customer_list_widget.dart' show MainCustomerListWidget;
+import 'main_companies_list_widget.dart' show MainCompaniesListWidget;
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -19,7 +19,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class MainCustomerListModel extends FlutterFlowModel<MainCustomerListWidget> {
+class MainCompaniesListModel extends FlutterFlowModel<MainCompaniesListWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

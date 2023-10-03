@@ -5,5 +5,8 @@ export '../supabase.dart';
 export 'row.dart';
 export 'table.dart';
 
+export 'tables/companies.dart';
+export 'tables/drivers.dart';
 export 'tables/profiles.dart';
+export 'tables/tasks.dart';
 export 'tables/customers.dart';

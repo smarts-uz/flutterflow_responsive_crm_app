@@ -17,19 +17,20 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'main_customer_list_model.dart';
-export 'main_customer_list_model.dart';
+import 'main_companies_list_model.dart';
+export 'main_companies_list_model.dart';
 
-class MainCustomerListWidget extends StatefulWidget {
-  const MainCustomerListWidget({Key? key}) : super(key: key);
+class MainCompaniesListWidget extends StatefulWidget {
+  const MainCompaniesListWidget({Key? key}) : super(key: key);
 
   @override
-  _MainCustomerListWidgetState createState() => _MainCustomerListWidgetState();
+  _MainCompaniesListWidgetState createState() =>
+      _MainCompaniesListWidgetState();
 }
 
-class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
+class _MainCompaniesListWidgetState extends State<MainCompaniesListWidget>
     with TickerProviderStateMixin {
-  late MainCustomerListModel _model;
+  late MainCompaniesListModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -99,10 +100,10 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => MainCustomerListModel());
+    _model = createModel(context, () => MainCompaniesListModel());
 
     logFirebaseEvent('screen_view',
-        parameters: {'screen_name': 'Main_customerList'});
+        parameters: {'screen_name': 'Main_companiesList'});
     _model.tabBarController = TabController(
       vsync: this,
       length: 3,
@@ -140,7 +141,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                 automaticallyImplyLeading: false,
                 title: Text(
                   FFLocalizations.of(context).getText(
-                    'fcyoodds' /* Customers */,
+                    'hp447ifw' /* Customers */,
                   ),
                   style: FlutterFlowTheme.of(context).displaySmall,
                 ),
@@ -186,7 +187,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                         Expanded(
                           child: Text(
                             FFLocalizations.of(context).getText(
-                              'n99lg1qh' /* Customers */,
+                              'm0tb9evb' /* Customers */,
                             ),
                             style: FlutterFlowTheme.of(context).displaySmall,
                           ),
@@ -200,7 +201,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                             builder: (context) => FFButtonWidget(
                               onPressed: () async {
                                 logFirebaseEvent(
-                                    'MAIN_CUSTOMER_LIST_INVITE_USERS_BTN_ON_T');
+                                    'MAIN_COMPANIES_LIST_INVITE_USERS_BTN_ON_');
                                 await showAlignedDialog(
                                   barrierColor: Colors.transparent,
                                   context: context,
@@ -227,7 +228,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                 ).then((value) => setState(() {}));
                               },
                               text: FFLocalizations.of(context).getText(
-                                'b7er5pp3' /* Invite Users */,
+                                '5op241my' /* Invite Users */,
                               ),
                               options: FFButtonOptions(
                                 height: 44.0,
@@ -269,7 +270,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                             ),
                             onPressed: () async {
                               logFirebaseEvent(
-                                  'MAIN_CUSTOMER_LIST_PAGE_add_ICN_ON_TAP');
+                                  'MAIN_COMPANIES_LIST_PAGE_add_ICN_ON_TAP');
                               await showAlignedDialog(
                                 context: context,
                                 isGlobal: true,
@@ -307,7 +308,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                           ),
                           onPressed: () async {
                             logFirebaseEvent(
-                                'MAIN_CUSTOMER_LIST_search_rounded_ICN_ON');
+                                'MAIN_COMPANIES_LIST_search_rounded_ICN_O');
                             await showModalBottomSheet(
                               isScrollControlled: true,
                               backgroundColor: Colors.transparent,
@@ -371,17 +372,17 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                 tabs: [
                                   Tab(
                                     text: FFLocalizations.of(context).getText(
-                                      'lvnskphp' /* All */,
+                                      'w45zf0ol' /* All */,
                                     ),
                                   ),
                                   Tab(
                                     text: FFLocalizations.of(context).getText(
-                                      'qh2ock0d' /* New Calls */,
+                                      'd4n6edk5' /* New Calls */,
                                     ),
                                   ),
                                   Tab(
                                     text: FFLocalizations.of(context).getText(
-                                      's7xebw09' /* Contacted */,
+                                      'q1jcrybj' /* Contacted */,
                                     ),
                                   ),
                                 ],
@@ -437,7 +438,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'haes0r2l' /* Id */,
+                                                            'njsvn6b3' /* Id */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -464,7 +465,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'dew4g2ka' /* Name */,
+                                                            '08kjw6gw' /* Name */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -496,7 +497,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '5rmzx51f' /* Title */,
+                                                              't5uy50n9' /* Title */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -528,7 +529,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'z0huz1sz' /* Company */,
+                                                              'ye7wgtgz' /* Company */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -555,7 +556,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            '4zc3d2m8' /* Status */,
+                                                            'epepr34z' /* Status */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -640,7 +641,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         logFirebaseEvent(
-                                                            'MAIN_CUSTOMER_LIST_Container_sog06zkz_ON');
+                                                            'MAIN_COMPANIES_LIST_Container_5xasg3pc_O');
                                                         await action_blocks
                                                             .openUserDetails(
                                                                 context);
@@ -850,7 +851,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                                     onTap:
                                                                         () async {
                                                                       logFirebaseEvent(
-                                                                          'MAIN_CUSTOMER_LIST_Icon_tjxgplxc_ON_TAP');
+                                                                          'MAIN_COMPANIES_LIST_Icon_1fqqg2f1_ON_TAP');
                                                                       await showAlignedDialog(
                                                                         barrierColor:
                                                                             Colors.transparent,
@@ -955,7 +956,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                          'zu2fhbzz' /* Id */,
+                                                          'omura3qq' /* Id */,
                                                         ),
                                                         style:
                                                             FlutterFlowTheme.of(
@@ -982,7 +983,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'g7av4tqg' /* Name */,
+                                                            'uw6excdm' /* Name */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1014,7 +1015,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'xffgkt7t' /* Title */,
+                                                              'h7yintus' /* Title */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1046,7 +1047,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'vxppadlg' /* Company */,
+                                                              'bfxrjvk4' /* Company */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1073,7 +1074,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'm8o2psfk' /* Status */,
+                                                            '7p0g9uvn' /* Status */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1163,7 +1164,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         logFirebaseEvent(
-                                                            'MAIN_CUSTOMER_LIST_Container_wr4yzzgv_ON');
+                                                            'MAIN_COMPANIES_LIST_Container_1ohhse3s_O');
                                                         await action_blocks
                                                             .openUserDetails(
                                                                 context);
@@ -1373,7 +1374,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                                     onTap:
                                                                         () async {
                                                                       logFirebaseEvent(
-                                                                          'MAIN_CUSTOMER_LIST_Icon_jmyz1m78_ON_TAP');
+                                                                          'MAIN_COMPANIES_LIST_Icon_6eggjk7y_ON_TAP');
                                                                       await showAlignedDialog(
                                                                         barrierColor:
                                                                             Colors.transparent,
@@ -1482,7 +1483,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'gt6bcr9e' /* Id */,
+                                                            'gdvahu1v' /* Id */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1509,7 +1510,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'h8dlrazy' /* Name */,
+                                                            'erkay40e' /* Name */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1541,7 +1542,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'w74av235' /* Title */,
+                                                              '502f72ef' /* Title */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1573,7 +1574,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '50sxuo4z' /* Company */,
+                                                              't8tgr3bs' /* Company */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1600,7 +1601,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'j3oz98xv' /* Status */,
+                                                            '2087ef1l' /* Status */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1690,7 +1691,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         logFirebaseEvent(
-                                                            'MAIN_CUSTOMER_LIST_Container_nngtsm68_ON');
+                                                            'MAIN_COMPANIES_LIST_Container_q8v75arh_O');
                                                         await action_blocks
                                                             .openUserDetails(
                                                                 context);
@@ -1900,7 +1901,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                                     onTap:
                                                                         () async {
                                                                       logFirebaseEvent(
-                                                                          'MAIN_CUSTOMER_LIST_Icon_nr3o9mq7_ON_TAP');
+                                                                          'MAIN_COMPANIES_LIST_Icon_kbsv1es3_ON_TAP');
                                                                       await showAlignedDialog(
                                                                         barrierColor:
                                                                             Colors.transparent,
