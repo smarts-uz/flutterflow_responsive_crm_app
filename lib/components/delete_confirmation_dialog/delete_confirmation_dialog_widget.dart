@@ -93,7 +93,7 @@ class _DeleteConfirmationDialogWidgetState
                           alignment: AlignmentDirectional(0.00, 0.00),
                           child: Text(
                             FFLocalizations.of(context).getText(
-                              'ua2ij2a3' /* Are you sure to delete this cu... */,
+                              'tab5p9f9' /* Are you sure to delete this cu... */,
                             ),
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
@@ -126,7 +126,7 @@ class _DeleteConfirmationDialogWidgetState
                             context.safePop();
                           },
                           text: FFLocalizations.of(context).getText(
-                            'gl7isg02' /* No */,
+                            '73wb6ae8' /* No */,
                           ),
                           options: FFButtonOptions(
                             height: 40.0,
@@ -155,7 +155,7 @@ class _DeleteConfirmationDialogWidgetState
                           Navigator.pop(context);
                         },
                         text: FFLocalizations.of(context).getText(
-                          'tghlacs1' /* Yes */,
+                          'ozbvuf9z' /* Yes */,
                         ),
                         options: FFButtonOptions(
                           height: 40.0,

@@ -1,4 +1,5 @@
 import '/components/delete_confirmation_dialog/delete_confirmation_dialog_widget.dart';
+import '/components/modals/edit_customer/edit_customer_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
@@ -12,9 +13,17 @@ class DropdownUserEditWidget extends StatefulWidget {
   const DropdownUserEditWidget({
     Key? key,
     required this.id,
+    required this.title,
+    required this.name,
+    required this.company,
+    required this.status,
   }) : super(key: key);
 
   final int? id;
+  final String? title;
+  final String? name;
+  final String? company;
+  final String? status;
 
   @override
   _DropdownUserEditWidgetState createState() => _DropdownUserEditWidgetState();
@@ -87,46 +96,75 @@ class _DropdownUserEditWidgetState extends State<DropdownUserEditWidget> {
                     child: MouseRegion(
                       opaque: false,
                       cursor: SystemMouseCursors.click ?? MouseCursor.defer,
-                      child: AnimatedContainer(
-                        duration: Duration(milliseconds: 150),
-                        curve: Curves.easeInOut,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: _model.mouseRegionHovered1!
-                              ? FlutterFlowTheme.of(context).primaryBackground
-                              : FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                        ),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 8.0, 0.0, 8.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    12.0, 0.0, 0.0, 0.0),
-                                child: Icon(
-                                  Icons.edit_sharp,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  size: 20.0,
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          logFirebaseEvent(
+                              'DROPDOWN_USER_EDIT_replaceWidget_ON_TAP');
+                          context.safePop();
+                          await showModalBottomSheet(
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            enableDrag: false,
+                            context: context,
+                            builder: (context) {
+                              return Padding(
+                                padding: MediaQuery.viewInsetsOf(context),
+                                child: EditCustomerWidget(
+                                  id: widget.id!,
+                                  title: widget.title!,
+                                  name: widget.name!,
+                                  company: widget.company!,
+                                  status: widget.status!,
                                 ),
-                              ),
-                              Expanded(
-                                child: Padding(
+                              );
+                            },
+                          ).then((value) => safeSetState(() {}));
+                        },
+                        child: AnimatedContainer(
+                          duration: Duration(milliseconds: 150),
+                          curve: Curves.easeInOut,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: _model.mouseRegionHovered1!
+                                ? FlutterFlowTheme.of(context).primaryBackground
+                                : FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 8.0, 0.0, 8.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'ufasy4ju' /* Edit */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
+                                  child: Icon(
+                                    Icons.edit_sharp,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 20.0,
                                   ),
                                 ),
-                              ),
-                            ],
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        12.0, 0.0, 0.0, 0.0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'ufasy4ju' /* Edit */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

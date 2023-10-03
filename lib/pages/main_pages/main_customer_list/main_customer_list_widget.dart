@@ -910,6 +910,10 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                               child: DropdownUserEditWidget(
                                                                                 id: listViewCustomersRow.id,
+                                                                                title: listViewCustomersRow.title!,
+                                                                                name: listViewCustomersRow.name!,
+                                                                                company: listViewCustomersRow.company!,
+                                                                                status: listViewCustomersRow.status!,
                                                                               ),
                                                                             ),
                                                                           );
@@ -1464,6 +1468,10 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                               child: DropdownUserEditWidget(
                                                                                 id: listViewCustomersRow.id,
+                                                                                title: listViewCustomersRow.title!,
+                                                                                name: listViewCustomersRow.name!,
+                                                                                company: listViewCustomersRow.company!,
+                                                                                status: listViewCustomersRow.status!,
                                                                               ),
                                                                             ),
                                                                           );
@@ -2018,6 +2026,10 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                               child: DropdownUserEditWidget(
                                                                                 id: listViewCustomersRow.id,
+                                                                                title: listViewCustomersRow.title!,
+                                                                                name: listViewCustomersRow.name!,
+                                                                                company: listViewCustomersRow.company!,
+                                                                                status: listViewCustomersRow.status!,
                                                                               ),
                                                                             ),
                                                                           );
