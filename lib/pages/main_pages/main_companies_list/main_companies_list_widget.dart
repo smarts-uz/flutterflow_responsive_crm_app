@@ -93,7 +93,7 @@ class _MainCompaniesListWidgetState extends State<MainCompaniesListWidget>
                 automaticallyImplyLeading: false,
                 title: Text(
                   FFLocalizations.of(context).getText(
-                    'hp447ifw' /* Customers */,
+                    'hp447ifw' /* Companies */,
                   ),
                   style: FlutterFlowTheme.of(context).displaySmall,
                 ),
@@ -208,7 +208,7 @@ class _MainCompaniesListWidgetState extends State<MainCompaniesListWidget>
                     ),
                     child: SingleChildScrollView(
                       child: Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           Container(
                             width: double.infinity,

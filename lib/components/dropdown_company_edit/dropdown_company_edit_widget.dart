@@ -1,4 +1,4 @@
-import '/components/delete_confirmation_dialog/delete_confirmation_dialog_widget.dart';
+import '/components/delete_company_confirmation_dialog/delete_company_confirmation_dialog_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
@@ -102,7 +102,28 @@ class _DropdownCompanyEditWidgetState extends State<DropdownCompanyEditWidget> {
                         onTap: () async {
                           logFirebaseEvent(
                               'DROPDOWN_COMPANY_EDIT_replaceWidget_ON_T');
-                          context.safePop();
+
+                          context.pushNamed(
+                            'EditCompanyPage',
+                            queryParameters: {
+                              'id': serializeParam(
+                                widget.id,
+                                ParamType.int,
+                              ),
+                              'title': serializeParam(
+                                widget.title,
+                                ParamType.String,
+                              ),
+                              'location': serializeParam(
+                                widget.location,
+                                ParamType.String,
+                              ),
+                              'founded': serializeParam(
+                                widget.founded,
+                                ParamType.DateTime,
+                              ),
+                            }.withoutNulls,
+                          );
                         },
                         child: AnimatedContainer(
                           duration: Duration(milliseconds: 150),
@@ -117,33 +138,66 @@ class _DropdownCompanyEditWidgetState extends State<DropdownCompanyEditWidget> {
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 8.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 0.0, 0.0, 0.0),
-                                  child: Icon(
-                                    Icons.edit_sharp,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    size: 20.0,
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Padding(
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                logFirebaseEvent(
+                                    'DROPDOWN_COMPANY_EDIT_COMP_option_ON_TAP');
+                                context.safePop();
+
+                                context.pushNamed(
+                                  'EditCompanyPage',
+                                  queryParameters: {
+                                    'id': serializeParam(
+                                      0,
+                                      ParamType.int,
+                                    ),
+                                    'title': serializeParam(
+                                      '',
+                                      ParamType.String,
+                                    ),
+                                    'location': serializeParam(
+                                      '',
+                                      ParamType.String,
+                                    ),
+                                    'founded': serializeParam(
+                                      widget.founded,
+                                      ParamType.DateTime,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 0.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        's41izyt7' /* Edit */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                    child: Icon(
+                                      Icons.edit_sharp,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 20.0,
                                     ),
                                   ),
-                                ),
-                              ],
+                                  Expanded(
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 0.0, 0.0, 0.0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          's41izyt7' /* Edit */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -289,8 +343,8 @@ class _DropdownCompanyEditWidgetState extends State<DropdownCompanyEditWidget> {
                                 child: Container(
                                   height: 200.0,
                                   width: double.infinity,
-                                  child: DeleteConfirmationDialogWidget(
-                                    customerId: widget.id!,
+                                  child: DeleteCompanyConfirmationDialogWidget(
+                                    companyId: widget.id!,
                                   ),
                                 ),
                               );

@@ -3,13 +3,13 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'add_company_page_widget.dart' show AddCompanyPageWidget;
+import 'edit_company_page_widget.dart' show EditCompanyPageWidget;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class AddCompanyPageModel extends FlutterFlowModel<AddCompanyPageWidget> {
+class EditCompanyPageModel extends FlutterFlowModel<EditCompanyPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -17,37 +17,14 @@ class AddCompanyPageModel extends FlutterFlowModel<AddCompanyPageWidget> {
   // State field(s) for TextField widget.
   TextEditingController? textController1;
   String? Function(BuildContext, String?)? textController1Validator;
-  String? _textController1Validator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'dlm2k6j3' /* Field is required */,
-      );
-    }
-
-    return null;
-  }
-
   // State field(s) for TextField widget.
   TextEditingController? textController2;
   String? Function(BuildContext, String?)? textController2Validator;
-  String? _textController2Validator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'c1h57dba' /* Field is required */,
-      );
-    }
-
-    return null;
-  }
-
   DateTime? datePicked;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {
-    textController1Validator = _textController1Validator;
-    textController2Validator = _textController2Validator;
-  }
+  void initState(BuildContext context) {}
 
   void dispose() {
     unfocusNode.dispose();

@@ -1,4 +1,4 @@
-import '/components/delete_confirmation_dialog/delete_confirmation_dialog_widget.dart';
+import '/components/delete_company_confirmation_dialog/delete_company_confirmation_dialog_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dropdown_company_edit_widget.dart' show DropdownCompanyEditWidget;

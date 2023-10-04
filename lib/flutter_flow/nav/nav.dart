@@ -180,6 +180,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'AddCompanyPage',
               path: 'addCompanyPage',
               builder: (context, params) => AddCompanyPageWidget(),
+            ),
+            FFRoute(
+              name: 'EditCompanyPage',
+              path: 'editCompanyPage',
+              builder: (context, params) => EditCompanyPageWidget(
+                id: params.getParam('id', ParamType.int),
+                title: params.getParam('title', ParamType.String),
+                location: params.getParam('location', ParamType.String),
+                founded: params.getParam('founded', ParamType.DateTime),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

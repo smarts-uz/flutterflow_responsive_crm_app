@@ -7,30 +7,41 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'add_company_page_model.dart';
-export 'add_company_page_model.dart';
+import 'edit_company_page_model.dart';
+export 'edit_company_page_model.dart';
 
-class AddCompanyPageWidget extends StatefulWidget {
-  const AddCompanyPageWidget({Key? key}) : super(key: key);
+class EditCompanyPageWidget extends StatefulWidget {
+  const EditCompanyPageWidget({
+    Key? key,
+    required this.id,
+    this.title,
+    this.location,
+    this.founded,
+  }) : super(key: key);
+
+  final int? id;
+  final String? title;
+  final String? location;
+  final DateTime? founded;
 
   @override
-  _AddCompanyPageWidgetState createState() => _AddCompanyPageWidgetState();
+  _EditCompanyPageWidgetState createState() => _EditCompanyPageWidgetState();
 }
 
-class _AddCompanyPageWidgetState extends State<AddCompanyPageWidget> {
-  late AddCompanyPageModel _model;
+class _EditCompanyPageWidgetState extends State<EditCompanyPageWidget> {
+  late EditCompanyPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AddCompanyPageModel());
+    _model = createModel(context, () => EditCompanyPageModel());
 
     logFirebaseEvent('screen_view',
-        parameters: {'screen_name': 'AddCompanyPage'});
-    _model.textController1 ??= TextEditingController();
-    _model.textController2 ??= TextEditingController();
+        parameters: {'screen_name': 'EditCompanyPage'});
+    _model.textController1 ??= TextEditingController(text: widget.title);
+    _model.textController2 ??= TextEditingController(text: widget.location);
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -64,13 +75,13 @@ class _AddCompanyPageWidgetState extends State<AddCompanyPageWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              logFirebaseEvent('ADD_COMPANY_arrow_back_rounded_ICN_ON_TA');
+              logFirebaseEvent('EDIT_COMPANY_arrow_back_rounded_ICN_ON_T');
               context.pop();
             },
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'hysg44c0' /* Add Company */,
+              '68w2uqs2' /* Edit Company */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium,
           ),
@@ -199,13 +210,12 @@ class _AddCompanyPageWidgetState extends State<AddCompanyPageWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        logFirebaseEvent(
-                            'ADD_COMPANY_PAGE_PAGE_FOUNDED_BTN_ON_TAP');
+                        logFirebaseEvent('EDIT_COMPANY_FOUNDED_BTN_ON_TAP');
                         final _datePickedDate = await showDatePicker(
                           context: context,
-                          initialDate: getCurrentTimestamp,
+                          initialDate: widget.founded!,
                           firstDate: DateTime(1900),
-                          lastDate: getCurrentTimestamp,
+                          lastDate: widget.founded!,
                         );
 
                         if (_datePickedDate != null) {
@@ -251,23 +261,27 @@ class _AddCompanyPageWidgetState extends State<AddCompanyPageWidget> {
                     child: FFButtonWidget(
                       onPressed: () async {
                         logFirebaseEvent(
-                            'ADD_COMPANY_PAGE_PAGE_SAVE_BTN_ON_TAP');
+                            'EDIT_COMPANY_PAGE_PAGE_UPDATE_BTN_ON_TAP');
                         if (_model.formKey.currentState == null ||
                             !_model.formKey.currentState!.validate()) {
                           return;
                         }
-                        if (_model.datePicked == null) {
-                          return;
-                        }
-                        await CompaniesTable().insert({
-                          'title': _model.textController1.text,
-                          'location': _model.textController2.text,
-                          'founded': supaSerialize<DateTime>(_model.datePicked),
-                        });
+                        await CompaniesTable().update(
+                          data: {
+                            'title': _model.textController1.text,
+                            'location': _model.textController2.text,
+                            'founded':
+                                supaSerialize<DateTime>(_model.datePicked),
+                          },
+                          matchingRows: (rows) => rows.eq(
+                            'id',
+                            widget.id,
+                          ),
+                        );
                         context.safePop();
                       },
                       text: FFLocalizations.of(context).getText(
-                        'ztn2xpe2' /* Save */,
+                        '8vix9fuw' /* Update */,
                       ),
                       options: FFButtonOptions(
                         width: double.infinity,

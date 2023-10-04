@@ -414,7 +414,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       decoration: InputDecoration(
                                         labelText:
                                             FFLocalizations.of(context).getText(
-                                          'k9u5spqi' /* Email Address */,
+                                          '0nwoj0kc' /* Email address */,
                                         ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
