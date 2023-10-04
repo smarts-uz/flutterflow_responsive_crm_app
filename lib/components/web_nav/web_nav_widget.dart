@@ -289,7 +289,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                     logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
 
                     context.pushNamed(
-                      'Main_customerList',
+                      'Main_companiesList',
                       extra: <String, dynamic>{
                         kTransitionInfoKey: TransitionInfo(
                           hasTransition: true,
@@ -302,7 +302,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: widget.selectedNav == 2
+                      color: widget.selectedNav == 3
                           ? FlutterFlowTheme.of(context).alternate
                           : FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
@@ -316,7 +316,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                         children: [
                           Icon(
                             Icons.business_rounded,
-                            color: widget.selectedNav == 2
+                            color: widget.selectedNav == 3
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -332,7 +332,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                                   .labelLarge
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: widget.selectedNav == 2
+                                    color: widget.selectedNav == 3
                                         ? FlutterFlowTheme.of(context)
                                             .primaryText
                                         : FlutterFlowTheme.of(context)
@@ -370,7 +370,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: widget.selectedNav == 3
+                      color: widget.selectedNav == 4
                           ? FlutterFlowTheme.of(context).alternate
                           : FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
@@ -384,7 +384,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                         children: [
                           Icon(
                             Icons.document_scanner_rounded,
-                            color: widget.selectedNav == 3
+                            color: widget.selectedNav == 4
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -400,7 +400,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                                   .labelLarge
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: widget.selectedNav == 3
+                                    color: widget.selectedNav == 4
                                         ? FlutterFlowTheme.of(context)
                                             .primaryText
                                         : FlutterFlowTheme.of(context)
@@ -438,7 +438,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: widget.selectedNav == 4
+                      color: widget.selectedNav == 5
                           ? FlutterFlowTheme.of(context).alternate
                           : FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
@@ -452,7 +452,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                         children: [
                           Icon(
                             Icons.forum_outlined,
-                            color: widget.selectedNav == 4
+                            color: widget.selectedNav == 5
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -468,7 +468,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                                   .labelLarge
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: widget.selectedNav == 4
+                                    color: widget.selectedNav == 5
                                         ? FlutterFlowTheme.of(context)
                                             .primaryText
                                         : FlutterFlowTheme.of(context)
@@ -506,7 +506,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: widget.selectedNav == 5
+                      color: widget.selectedNav == 6
                           ? FlutterFlowTheme.of(context).alternate
                           : FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
@@ -520,7 +520,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                         children: [
                           Icon(
                             Icons.account_circle_rounded,
-                            color: widget.selectedNav == 5
+                            color: widget.selectedNav == 6
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -536,7 +536,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                                   .labelLarge
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: widget.selectedNav == 5
+                                    color: widget.selectedNav == 6
                                         ? FlutterFlowTheme.of(context)
                                             .primaryText
                                         : FlutterFlowTheme.of(context)

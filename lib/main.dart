@@ -132,10 +132,10 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'Main_Home': MainHomeWidget(),
       'Main_customerList': MainCustomerListWidget(),
+      'Main_companiesList': MainCompaniesListWidget(),
       'Main_Contracts': MainContractsWidget(),
       'Main_messages': MainMessagesWidget(),
       'Main_profilePage': MainProfilePageWidget(),
-      'Main_companiesList': MainCompaniesListWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -166,7 +166,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 size: 24.0,
               ),
               activeIcon: Icon(
-                Icons.dashboard_rounded,
+                Icons.dashboard,
                 size: 32.0,
               ),
               label: FFLocalizations.of(context).getText(
@@ -194,7 +194,21 @@ class _NavBarPageState extends State<NavBarPage> {
                 size: 24.0,
               ),
               activeIcon: Icon(
-                Icons.home_work_rounded,
+                Icons.home_work,
+                size: 32.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                '89iqx991' /* __ */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.document_scanner_outlined,
+                size: 24.0,
+              ),
+              activeIcon: Icon(
+                Icons.document_scanner,
                 size: 32.0,
               ),
               label: FFLocalizations.of(context).getText(
@@ -227,20 +241,6 @@ class _NavBarPageState extends State<NavBarPage> {
               ),
               label: FFLocalizations.of(context).getText(
                 'o3dp9tss' /* __ */,
-              ),
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.supervised_user_circle_outlined,
-                size: 24.0,
-              ),
-              activeIcon: Icon(
-                Icons.supervised_user_circle_sharp,
-                size: 32.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                '89iqx991' /* __ */,
               ),
               tooltip: '',
             )
