@@ -1,7 +1,6 @@
 import '/backend/supabase/supabase.dart';
 import '/components/command_palette/command_palette_widget.dart';
 import '/components/dropdown_company_edit/dropdown_company_edit_widget.dart';
-import '/components/modals/create_customer/create_customer_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';

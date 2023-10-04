@@ -214,7 +214,7 @@ class _ModalInviteUserWidgetState extends State<ModalInviteUserWidget>
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: FFLocalizations.of(context).getText(
-                                'ctfs7f6t' /* User Name */,
+                                '0nwoj0kc' /* User Name */,
                               ),
                               labelStyle:
                                   FlutterFlowTheme.of(context).labelMedium,
@@ -269,7 +269,7 @@ class _ModalInviteUserWidgetState extends State<ModalInviteUserWidget>
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: FFLocalizations.of(context).getText(
-                                'lz0vcvft' /* Bio */,
+                                '0nwoj0kc' /* Bio */,
                               ),
                               labelStyle:
                                   FlutterFlowTheme.of(context).labelMedium,

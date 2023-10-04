@@ -175,6 +175,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Main_companiesList')
                   : MainCompaniesListWidget(),
+            ),
+            FFRoute(
+              name: 'AddCompanyPage',
+              path: 'addCompanyPage',
+              builder: (context, params) => AddCompanyPageWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

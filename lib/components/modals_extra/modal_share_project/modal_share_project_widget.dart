@@ -618,7 +618,7 @@ class _ModalShareProjectWidgetState extends State<ModalShareProjectWidget>
                                       decoration: InputDecoration(
                                         labelText:
                                             FFLocalizations.of(context).getText(
-                                          'x8i2mu80' /* Project Link */,
+                                          '0nwoj0kc' /* Project Link */,
                                         ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,

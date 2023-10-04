@@ -154,7 +154,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'nsythw6u' /* Title */,
+                                        '0nwoj0kc' /* Title */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -221,7 +221,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'jn3h4ll8' /* Name */,
+                                        '0nwoj0kc' /* Name */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -288,7 +288,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'c0xxht2v' /* Company */,
+                                        '0nwoj0kc' /* Company */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,

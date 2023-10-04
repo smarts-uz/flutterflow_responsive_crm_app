@@ -1,7 +1,6 @@
 import '/backend/supabase/supabase.dart';
 import '/components/command_palette/command_palette_widget.dart';
 import '/components/dropdown_company_edit/dropdown_company_edit_widget.dart';
-import '/components/modals/create_customer/create_customer_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -145,44 +144,22 @@ class _MainCompaniesListWidgetState extends State<MainCompaniesListWidget>
                             style: FlutterFlowTheme.of(context).displaySmall,
                           ),
                         ),
-                        Builder(
-                          builder: (context) => FlutterFlowIconButton(
-                            borderColor: FlutterFlowTheme.of(context).primary,
-                            borderRadius: 12.0,
-                            borderWidth: 2.0,
-                            fillColor: FlutterFlowTheme.of(context).accent1,
-                            icon: Icon(
-                              Icons.add,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 24.0,
-                            ),
-                            onPressed: () async {
-                              logFirebaseEvent(
-                                  'MAIN_COMPANIES_LIST_PAGE_add_ICN_ON_TAP');
-                              await showAlignedDialog(
-                                context: context,
-                                isGlobal: true,
-                                avoidOverflow: false,
-                                targetAnchor: AlignmentDirectional(0.0, 0.0)
-                                    .resolve(Directionality.of(context)),
-                                followerAnchor: AlignmentDirectional(0.0, 0.0)
-                                    .resolve(Directionality.of(context)),
-                                builder: (dialogContext) {
-                                  return Material(
-                                    color: Colors.transparent,
-                                    child: GestureDetector(
-                                      onTap: () => _model
-                                              .unfocusNode.canRequestFocus
-                                          ? FocusScope.of(context)
-                                              .requestFocus(_model.unfocusNode)
-                                          : FocusScope.of(context).unfocus(),
-                                      child: CreateCustomerWidget(),
-                                    ),
-                                  );
-                                },
-                              ).then((value) => setState(() {}));
-                            },
+                        FlutterFlowIconButton(
+                          borderColor: FlutterFlowTheme.of(context).primary,
+                          borderRadius: 12.0,
+                          borderWidth: 2.0,
+                          fillColor: FlutterFlowTheme.of(context).accent1,
+                          icon: Icon(
+                            Icons.add,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            size: 24.0,
                           ),
+                          onPressed: () async {
+                            logFirebaseEvent(
+                                'MAIN_COMPANIES_LIST_PAGE_add_ICN_ON_TAP');
+
+                            context.pushNamed('AddCompanyPage');
+                          },
                         ),
                         FlutterFlowIconButton(
                           borderColor: Colors.transparent,

@@ -240,7 +240,7 @@ class _ModalCreateCompanyWidgetState extends State<ModalCreateCompanyWidget>
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: FFLocalizations.of(context).getText(
-                                '2zz9r0nk' /* Company Name */,
+                                '0nwoj0kc' /* Company Name */,
                               ),
                               labelStyle:
                                   FlutterFlowTheme.of(context).labelMedium,
@@ -295,7 +295,7 @@ class _ModalCreateCompanyWidgetState extends State<ModalCreateCompanyWidget>
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: FFLocalizations.of(context).getText(
-                                'hsxlh4zc' /* Company City */,
+                                '0nwoj0kc' /* Company City */,
                               ),
                               labelStyle:
                                   FlutterFlowTheme.of(context).labelMedium,
@@ -350,13 +350,12 @@ class _ModalCreateCompanyWidgetState extends State<ModalCreateCompanyWidget>
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: FFLocalizations.of(context).getText(
-                                'f1aegt92' /* Website */,
+                                '0nwoj0kc' /* Website */,
                               ),
                               labelStyle:
                                   FlutterFlowTheme.of(context).labelMedium,
-                              hintText: FFLocalizations.of(context).getText(
-                                'nrfx3n3y' /* Enter in your website without ... */,
-                              ),
+                              hintText:
+                                  'Enter in your website without \"https://\"...',
                               hintStyle:
                                   FlutterFlowTheme.of(context).labelMedium,
                               enabledBorder: OutlineInputBorder(

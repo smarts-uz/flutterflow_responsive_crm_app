@@ -26,3 +26,5 @@ export '/pages/messages_details/messages_details_widget.dart'
     show MessagesDetailsWidget;
 export '/pages/main_pages/main_companies_list/main_companies_list_widget.dart'
     show MainCompaniesListWidget;
+export '/pages/add_company_page/add_company_page_widget.dart'
+    show AddCompanyPageWidget;
