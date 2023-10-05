@@ -153,7 +153,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        '0nwoj0kc' /* Title */,
+                                        'pgew88kh' /* Name */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -220,7 +220,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        '0nwoj0kc' /* Name */,
+                                        'hzm0dpp0' /* Title */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -418,8 +418,8 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     return;
                                   }
                                   await CustomersTable().insert({
-                                    'name': _model.textController2.text,
-                                    'title': _model.textController1.text,
+                                    'name': _model.textController1.text,
+                                    'title': _model.textController2.text,
                                     'company': _model.dropDownValue1,
                                     'status': _model.dropDownValue2,
                                   });

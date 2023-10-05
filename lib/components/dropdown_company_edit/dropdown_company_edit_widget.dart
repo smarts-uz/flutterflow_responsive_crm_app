@@ -14,7 +14,7 @@ class DropdownCompanyEditWidget extends StatefulWidget {
     required this.id,
     required this.title,
     required this.location,
-    required this.founded,
+    this.founded,
   }) : super(key: key);
 
   final int? id;
@@ -102,9 +102,10 @@ class _DropdownCompanyEditWidgetState extends State<DropdownCompanyEditWidget> {
                         onTap: () async {
                           logFirebaseEvent(
                               'DROPDOWN_COMPANY_EDIT_replaceWidget_ON_T');
+                          context.safePop();
 
                           context.pushNamed(
-                            'EditCompanyPage',
+                            'editCompany',
                             queryParameters: {
                               'id': serializeParam(
                                 widget.id,
@@ -138,66 +139,33 @@ class _DropdownCompanyEditWidgetState extends State<DropdownCompanyEditWidget> {
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 8.0),
-                            child: InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              onTap: () async {
-                                logFirebaseEvent(
-                                    'DROPDOWN_COMPANY_EDIT_COMP_option_ON_TAP');
-                                context.safePop();
-
-                                context.pushNamed(
-                                  'EditCompanyPage',
-                                  queryParameters: {
-                                    'id': serializeParam(
-                                      0,
-                                      ParamType.int,
-                                    ),
-                                    'title': serializeParam(
-                                      '',
-                                      ParamType.String,
-                                    ),
-                                    'location': serializeParam(
-                                      '',
-                                      ParamType.String,
-                                    ),
-                                    'founded': serializeParam(
-                                      widget.founded,
-                                      ParamType.DateTime,
-                                    ),
-                                  }.withoutNulls,
-                                );
-                              },
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      12.0, 0.0, 0.0, 0.0),
+                                  child: Icon(
+                                    Icons.edit_sharp,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 20.0,
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 0.0, 0.0),
-                                    child: Icon(
-                                      Icons.edit_sharp,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      size: 20.0,
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          12.0, 0.0, 0.0, 0.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          's41izyt7' /* Edit */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        's41izyt7' /* Edit */,
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),

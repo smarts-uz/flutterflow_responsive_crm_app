@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -144,6 +145,9 @@ class _DeleteDriverDialogWidgetState extends State<DeleteDriverDialogWidget> {
                         onPressed: () async {
                           logFirebaseEvent(
                               'DELETE_DRIVER_DIALOG_COMP_YES_BTN_ON_TAP');
+                          await DriversEDGEGroup.deleteDriverCall.call(
+                            id: widget.driverId,
+                          );
                           Navigator.pop(context);
                         },
                         text: FFLocalizations.of(context).getText(

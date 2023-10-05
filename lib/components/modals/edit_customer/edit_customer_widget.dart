@@ -167,7 +167,7 @@ class _EditCustomerWidgetState extends State<EditCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        '0nwoj0kc' /* Title */,
+                                        'pesrur3v' /* Title */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -234,7 +234,7 @@ class _EditCustomerWidgetState extends State<EditCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        '0nwoj0kc' /* Name */,
+                                        't8i2z4co' /* Name */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -301,7 +301,7 @@ class _EditCustomerWidgetState extends State<EditCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        '0nwoj0kc' /* Company */,
+                                        '9yezka2s' /* Company */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -424,6 +424,9 @@ class _EditCustomerWidgetState extends State<EditCustomerWidget> {
                                   if (_model.formKey.currentState == null ||
                                       !_model.formKey.currentState!
                                           .validate()) {
+                                    return;
+                                  }
+                                  if (_model.dropDownValue == null) {
                                     return;
                                   }
                                   await CustomersTable().update(

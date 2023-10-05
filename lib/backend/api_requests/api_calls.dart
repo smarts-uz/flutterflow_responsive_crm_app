@@ -177,7 +177,9 @@ class DeleteDriverCall {
         'Authorization':
             'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJmdHZic3ZjbGplbW9vbm9mZGhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU5MTYzNDQsImV4cCI6MjAxMTQ5MjM0NH0.X-GtVHCkph5RGu_3nijIMSSe-bFX7YxgvxJ8TfqO5E8',
       },
-      params: {},
+      params: {
+        'id': id,
+      },
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,

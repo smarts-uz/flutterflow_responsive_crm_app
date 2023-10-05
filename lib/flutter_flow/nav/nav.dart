@@ -177,24 +177,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : MainCompaniesListWidget(),
             ),
             FFRoute(
-              name: 'AddCompanyPage',
-              path: 'addCompanyPage',
-              builder: (context, params) => AddCompanyPageWidget(),
+              name: 'Main_driversList',
+              path: 'mainDriversList',
+              builder: (context, params) => MainDriversListWidget(),
             ),
             FFRoute(
-              name: 'EditCompanyPage',
-              path: 'editCompanyPage',
-              builder: (context, params) => EditCompanyPageWidget(
+              name: 'addCompany',
+              path: 'addCompany',
+              builder: (context, params) => AddCompanyWidget(),
+            ),
+            FFRoute(
+              name: 'editCompany',
+              path: 'editCompany',
+              builder: (context, params) => EditCompanyWidget(
                 id: params.getParam('id', ParamType.int),
                 title: params.getParam('title', ParamType.String),
                 location: params.getParam('location', ParamType.String),
                 founded: params.getParam('founded', ParamType.DateTime),
               ),
-            ),
-            FFRoute(
-              name: 'Main_driversList',
-              path: 'mainDriversList',
-              builder: (context, params) => MainDriversListWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
