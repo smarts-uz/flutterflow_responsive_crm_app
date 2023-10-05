@@ -34,7 +34,6 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
 
     _model.textController1 ??= TextEditingController();
     _model.textController2 ??= TextEditingController();
-    _model.textController3 ??= TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -281,68 +280,76 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 16.0, 0.0, 0.0),
-                                  child: TextFormField(
-                                    controller: _model.textController3,
-                                    autofocus: true,
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      labelText:
-                                          FFLocalizations.of(context).getText(
-                                        '0nwoj0kc' /* Company */,
-                                      ),
-                                      labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
-                                      hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
-                                      enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(12.0),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(12.0),
-                                      ),
-                                      errorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(12.0),
-                                      ),
-                                      focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(12.0),
-                                      ),
-                                      filled: true,
-                                      fillColor: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              20.0, 24.0, 20.0, 24.0),
+                                  child: FutureBuilder<List<CompaniesRow>>(
+                                    future: CompaniesTable().queryRows(
+                                      queryFn: (q) => q,
                                     ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
-                                    cursorColor:
-                                        FlutterFlowTheme.of(context).primary,
-                                    validator: _model.textController3Validator
-                                        .asValidator(context),
+                                    builder: (context, snapshot) {
+                                      // Customize what your widget looks like when it's loading.
+                                      if (!snapshot.hasData) {
+                                        return Center(
+                                          child: SizedBox(
+                                            width: 50.0,
+                                            height: 50.0,
+                                            child: CircularProgressIndicator(
+                                              valueColor:
+                                                  AlwaysStoppedAnimation<Color>(
+                                                FlutterFlowTheme.of(context)
+                                                    .primary,
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                      List<CompaniesRow>
+                                          dropDownCompaniesRowList =
+                                          snapshot.data!;
+                                      return FlutterFlowDropDown<String>(
+                                        controller: _model
+                                                .dropDownValueController1 ??=
+                                            FormFieldController<String>(null),
+                                        options: dropDownCompaniesRowList
+                                            .map((e) => e.title)
+                                            .withoutNulls
+                                            .toList(),
+                                        onChanged: (val) async {
+                                          setState(() =>
+                                              _model.dropDownValue1 = val);
+                                          logFirebaseEvent(
+                                              'CREATE_CUSTOMER_DropDown_1wdgwi4z_ON_FOR');
+                                          setState(() {
+                                            _model.selectedCompanyId = 0;
+                                          });
+                                        },
+                                        width: double.infinity,
+                                        height: 50.0,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        hintText:
+                                            FFLocalizations.of(context).getText(
+                                          'i651zt8e' /* Please select company... */,
+                                        ),
+                                        icon: Icon(
+                                          Icons.keyboard_arrow_down_rounded,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          size: 24.0,
+                                        ),
+                                        fillColor: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        elevation: 2.0,
+                                        borderColor:
+                                            FlutterFlowTheme.of(context)
+                                                .alternate,
+                                        borderWidth: 2.0,
+                                        borderRadius: 12.0,
+                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 4.0, 16.0, 4.0),
+                                        hidesUnderline: true,
+                                        isSearchable: false,
+                                        isMultiSelect: false,
+                                      );
+                                    },
                                   ),
                                 ),
                                 Padding(
@@ -350,7 +357,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                       0.0, 16.0, 0.0, 0.0),
                                   child: FlutterFlowDropDown<String>(
                                     controller:
-                                        _model.dropDownValueController ??=
+                                        _model.dropDownValueController2 ??=
                                             FormFieldController<String>(null),
                                     options: [
                                       FFLocalizations.of(context).getText(
@@ -361,14 +368,14 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                       )
                                     ],
                                     onChanged: (val) => setState(
-                                        () => _model.dropDownValue = val),
+                                        () => _model.dropDownValue2 = val),
                                     width: double.infinity,
                                     height: 50.0,
                                     textStyle:
                                         FlutterFlowTheme.of(context).bodyMedium,
                                     hintText:
                                         FFLocalizations.of(context).getText(
-                                      'gclvpn85' /* Please select... */,
+                                      'gclvpn85' /* Please select status... */,
                                     ),
                                     icon: Icon(
                                       Icons.keyboard_arrow_down_rounded,
@@ -411,14 +418,17 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                           .validate()) {
                                     return;
                                   }
-                                  if (_model.dropDownValue == null) {
+                                  if (_model.dropDownValue1 == null) {
+                                    return;
+                                  }
+                                  if (_model.dropDownValue2 == null) {
                                     return;
                                   }
                                   await CustomersTable().insert({
                                     'name': _model.textController2.text,
                                     'title': _model.textController1.text,
-                                    'company': _model.textController3.text,
-                                    'status': _model.dropDownValue,
+                                    'company': _model.dropDownValue1,
+                                    'status': _model.dropDownValue2,
                                   });
                                   context.pop();
                                 },

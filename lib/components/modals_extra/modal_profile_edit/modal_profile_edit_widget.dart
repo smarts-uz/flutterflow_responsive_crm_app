@@ -219,7 +219,7 @@ class _ModalProfileEditWidgetState extends State<ModalProfileEditWidget>
                           obscureText: false,
                           decoration: InputDecoration(
                             labelText: FFLocalizations.of(context).getText(
-                              '0nwoj0kc' /* Email address */,
+                              '99oumm34' /* Your Name */,
                             ),
                             labelStyle:
                                 FlutterFlowTheme.of(context).labelMedium,

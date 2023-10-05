@@ -194,7 +194,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: FFLocalizations.of(context).getText(
-                        '0nwoj0kc' /* Email address */,
+                        '4no7ue4a' /* Your Name */,
                       ),
                       labelStyle: FlutterFlowTheme.of(context).labelMedium,
                       hintStyle: FlutterFlowTheme.of(context).labelMedium,

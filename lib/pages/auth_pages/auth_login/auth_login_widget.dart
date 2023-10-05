@@ -412,10 +412,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       autofocus: true,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          '0nwoj0kc' /* Email address */,
-                                        ),
+                                        labelText: 'Email address',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintText:

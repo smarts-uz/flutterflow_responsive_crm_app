@@ -388,7 +388,7 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                   decoration: InputDecoration(
                                     labelText:
                                         FFLocalizations.of(context).getText(
-                                      '0nwoj0kc' /* Email address */,
+                                      'seheok8a' /* Email Address */,
                                     ),
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,

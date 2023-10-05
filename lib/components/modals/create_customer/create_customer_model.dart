@@ -11,6 +11,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class CreateCustomerModel extends FlutterFlowModel<CreateCustomerWidget> {
+  ///  Local state fields for this component.
+
+  int? selectedCompanyId;
+
   ///  State fields for stateful widgets in this component.
 
   final formKey = GlobalKey<FormState>();
@@ -40,35 +44,23 @@ class CreateCustomerModel extends FlutterFlowModel<CreateCustomerWidget> {
     return null;
   }
 
-  // State field(s) for TextField widget.
-  TextEditingController? textController3;
-  String? Function(BuildContext, String?)? textController3Validator;
-  String? _textController3Validator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'hgrdfnby' /* Field is required */,
-      );
-    }
-
-    return null;
-  }
-
   // State field(s) for DropDown widget.
-  String? dropDownValue;
-  FormFieldController<String>? dropDownValueController;
+  String? dropDownValue1;
+  FormFieldController<String>? dropDownValueController1;
+  // State field(s) for DropDown widget.
+  String? dropDownValue2;
+  FormFieldController<String>? dropDownValueController2;
 
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
     textController1Validator = _textController1Validator;
     textController2Validator = _textController2Validator;
-    textController3Validator = _textController3Validator;
   }
 
   void dispose() {
     textController1?.dispose();
     textController2?.dispose();
-    textController3?.dispose();
   }
 
   /// Action blocks are added here.

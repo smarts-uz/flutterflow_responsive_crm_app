@@ -144,15 +144,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'మీ ఖాతాను యాక్సెస్ చేయడానికి దిగువ ఫారమ్‌ని ఉపయోగించండి.',
       'ur': 'اپنے اکاؤنٹ تک رسائی کے لیے نیچے دیے گئے فارم کا استعمال کریں۔',
     },
-    '0nwoj0kc': {
+    '3txc4j6d': {
       'en': 'Email address',
-      'bn': 'অবস্থান',
-      'hi': 'जगह',
-      'ml': 'സ്ഥാനം',
-      'or': 'ଅବସ୍ଥାନ',
-      'ta': 'இடம்',
-      'te': 'స్థానం',
-      'ur': 'مقام',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
     },
     'f4xxyrqv': {
       'en': 'Enter your email here...',
@@ -315,15 +315,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur':
           'اپنا پاس ورڈ یاد نہیں ہے؟ ذیل میں اپنے اکاؤنٹ سے وابستہ ای میل درج کریں اور ہم آپ کو ایک نیا لنک بھیجیں گے۔',
     },
-    '0nwoj0kc': {
-      'en': 'Email address',
-      'bn': 'অবস্থান',
-      'hi': 'जगह',
-      'ml': 'സ്ഥാനം',
-      'or': 'ଅବସ୍ଥାନ',
-      'ta': 'இடம்',
-      'te': 'స్థానం',
-      'ur': 'مقام',
+    'tzm5opaa': {
+      'en': 'Email Address',
+      'bn': 'ইমেইল ঠিকানা',
+      'hi': 'मेल पता',
+      'ml': 'ഇമെയിൽ വിലാസം',
+      'or': 'ଈମୈଲ ଠିକଣା',
+      'ta': 'மின்னஞ்சல் முகவரி',
+      'te': 'ఇమెయిల్ చిరునామా',
+      'ur': 'ای میل اڈریس',
     },
     'uvsotzng': {
       'en': 'Please enter a valid email...',
@@ -378,15 +378,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'ప్రారంభించడానికి దిగువ ఫారమ్‌ని ఉపయోగించండి.',
       'ur': 'شروع کرنے کے لیے نیچے دیے گئے فارم کا استعمال کریں۔',
     },
-    '0nwoj0kc': {
-      'en': 'Email address',
-      'bn': 'অবস্থান',
-      'hi': 'जगह',
-      'ml': 'സ്ഥാനം',
-      'or': 'ଅବସ୍ଥାନ',
-      'ta': 'இடம்',
-      'te': 'స్థానం',
-      'ur': 'مقام',
+    'seheok8a': {
+      'en': 'Email Address',
+      'bn': 'ইমেইল ঠিকানা',
+      'hi': 'मेल पता',
+      'ml': 'ഇമെയിൽ വിലാസം',
+      'or': 'ଈମୈଲ ଠିକଣା',
+      'ta': 'மின்னஞ்சல் முகவரி',
+      'te': 'ఇమెయిల్ చిరునామా',
+      'ur': 'ای میل اڈریس',
     },
     '0uknk55c': {
       'en': 'Enter your email here...',
@@ -1519,17 +1519,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'ఫోటో మార్చు',
       'ur': 'تصویر تبدیل کریں',
     },
-    '0nwoj0kc': {
-      'en': 'Email address',
-      'bn': 'অবস্থান',
-      'hi': 'जगह',
-      'ml': 'സ്ഥാനം',
-      'or': 'ଅବସ୍ଥାନ',
-      'ta': 'இடம்',
-      'te': 'స్థానం',
-      'ur': 'مقام',
+    '4no7ue4a': {
+      'en': 'Your Name',
+      'bn': 'তোমার নাম',
+      'hi': 'अप का नाम',
+      'ml': 'നിങ്ങളുടെ പേര്',
+      'or': 'ତୁମର ନାମ',
+      'ta': 'உங்கள் பெயர்',
+      'te': 'నీ పేరు',
+      'ur': 'تمھارا نام',
     },
-    'ee779rx0': {
+    'v59lvc99': {
       'en': '',
       'bn': '',
       'hi': '',
@@ -3518,7 +3518,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థానం',
       'ur': 'مقام',
     },
-    'yjj0es80': {
+    'yije0zun': {
       'en': '',
       'bn': '',
       'hi': '',
@@ -3528,7 +3528,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '2p3vmprd': {
+    '44bxnek4': {
       'en': '',
       'bn': '',
       'hi': '',
@@ -3538,7 +3538,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'la2tw47t': {
+    'upiv57pd': {
       'en': 'Enter in your website without \"https://\"...',
       'bn': '',
       'hi': '',
@@ -3621,7 +3621,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థానం',
       'ur': 'مقام',
     },
-    'dwl3w8rp': {
+    '04kbyrbh': {
       'en': '',
       'bn': '',
       'hi': '',
@@ -3631,7 +3631,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'plnglfxx': {
+    '1qk428du': {
       'en': '',
       'bn': '',
       'hi': '',
@@ -3867,7 +3867,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థానం',
       'ur': 'مقام',
     },
-    '5y1x543r': {
+    'kcwcjuu0': {
       'en': '',
       'bn': '',
       'hi': '',
@@ -3940,7 +3940,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థానం',
       'ur': 'مقام',
     },
-    'rjm281ln': {
+    '6e56asej': {
       'en': '',
       'bn': '',
       'hi': '',
@@ -4156,6 +4156,26 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'ఫోటో మార్చు',
       'ur': 'تصویر تبدیل کریں',
     },
+    '99oumm34': {
+      'en': 'Your Name',
+      'bn': 'তোমার নাম',
+      'hi': 'अप का नाम',
+      'ml': 'നിങ്ങളുടെ പേര്',
+      'or': 'ତୁମର ନାମ',
+      'ta': 'உங்கள் பெயர்',
+      'te': 'నీ పేరు',
+      'ur': 'تمھارا نام',
+    },
+    'g9pm7fg8': {
+      'en': '',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
     '0nwoj0kc': {
       'en': 'Short Description',
       'bn': 'অবস্থান',
@@ -4166,17 +4186,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థానం',
       'ur': 'مقام',
     },
-    'orqnq20g': {
-      'en': '',
-      'bn': '',
-      'hi': '',
-      'ml': '',
-      'or': '',
-      'ta': '',
-      'te': '',
-      'ur': '',
-    },
-    'zipbb8ki': {
+    '13mjc0q7': {
       'en': '',
       'bn': '',
       'hi': '',
@@ -4350,7 +4360,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'گاہک بنائیں',
     },
     '0nwoj0kc': {
-      'en': 'Company',
+      'en': 'Name',
       'bn': 'অবস্থান',
       'hi': 'जगह',
       'ml': 'സ്ഥാനം',
@@ -4358,6 +4368,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'இடம்',
       'te': 'స్థానం',
       'ur': 'مقام',
+    },
+    'v4xz9qg0': {
+      'en': '',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
+    'i651zt8e': {
+      'en': 'Please select company...',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
+    '72zmex55': {
+      'en': 'Search for an item...',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
     },
     'nm2sibzb': {
       'en': 'New',
@@ -4380,7 +4420,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'رابطہ کیا۔',
     },
     'gclvpn85': {
-      'en': 'Please select...',
+      'en': 'Please select status...',
       'bn': 'অনুগ্রহ করে নির্বাচন করুন...',
       'hi': 'कृपया चयन कीजिए...',
       'ml': 'ദയവായി തിരഞ്ഞെടുക്കുക...',
@@ -4398,26 +4438,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'ஒரு பொருளைத் தேடு...',
       'te': 'వస్తువు కోసం వెతకండి...',
       'ur': 'ایک آئٹم تلاش کریں...',
-    },
-    '70qvcsry': {
-      'en': 'Field is required',
-      'bn': 'আপনি উত্তর দিবেন না',
-      'hi': 'ये स्थान भरा जाना है',
-      'ml': 'ഫീൽഡ് ആവശ്യമാണ്',
-      'or': 'କ୍ଷେତ୍ର ଆବଶ୍ୟକ |',
-      'ta': 'இந்த பகுதி அவசியமானது',
-      'te': 'ఫీల్డ్ అవసరం',
-      'ur': 'فیلڈ کی ضرورت ہے',
-    },
-    '8tfrvnws': {
-      'en': 'Please choose an option from the dropdown',
-      'bn': 'ড্রপডাউন থেকে একটি বিকল্প চয়ন করুন',
-      'hi': 'कृपया ड्रॉपडाउन से एक विकल्प चुनें',
-      'ml': 'ഡ്രോപ്പ്ഡൗണിൽ നിന്ന് ഒരു ഓപ്ഷൻ തിരഞ്ഞെടുക്കുക',
-      'or': 'ଦୟାକରି ଡ୍ରପଡାଉନରୁ ଏକ ବିକଳ୍ପ ବାଛନ୍ତୁ |',
-      'ta': 'கீழ்தோன்றலில் இருந்து ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்',
-      'te': 'దయచేసి డ్రాప్‌డౌన్ నుండి ఒక ఎంపికను ఎంచుకోండి',
-      'ur': 'براہ کرم ڈراپ ڈاؤن سے ایک آپشن منتخب کریں۔',
     },
     '2l1x5k4v': {
       'en': 'Field is required',
@@ -4439,7 +4459,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'దయచేసి డ్రాప్‌డౌన్ నుండి ఒక ఎంపికను ఎంచుకోండి',
       'ur': 'براہ کرم ڈراپ ڈاؤن سے ایک آپشن منتخب کریں۔',
     },
-    'hgrdfnby': {
+    '70qvcsry': {
       'en': 'Field is required',
       'bn': 'আপনি উত্তর দিবেন না',
       'hi': 'ये स्थान भरा जाना है',
@@ -4449,7 +4469,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'ఫీల్డ్ అవసరం',
       'ur': 'فیلڈ کی ضرورت ہے',
     },
-    'bkvrlgqp': {
+    '8tfrvnws': {
       'en': 'Please choose an option from the dropdown',
       'bn': 'ড্রপডাউন থেকে একটি বিকল্প চয়ন করুন',
       'hi': 'कृपया ड्रॉपडाउन से एक विकल्प चुनें',
