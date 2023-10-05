@@ -44,6 +44,47 @@ class GetDriversCall {
       cache: false,
     );
   }
+
+  dynamic data(dynamic response) => getJsonField(
+        response,
+        r'''$.data''',
+        true,
+      );
+  dynamic id(dynamic response) => getJsonField(
+        response,
+        r'''$.data[:].id''',
+        true,
+      );
+  dynamic firstName(dynamic response) => getJsonField(
+        response,
+        r'''$.data[:].first_name''',
+        true,
+      );
+  dynamic lastName(dynamic response) => getJsonField(
+        response,
+        r'''$.data[:].last_name''',
+        true,
+      );
+  dynamic model(dynamic response) => getJsonField(
+        response,
+        r'''$.data[:].model''',
+        true,
+      );
+  dynamic carNumber(dynamic response) => getJsonField(
+        response,
+        r'''$.data[:].car_number''',
+        true,
+      );
+  dynamic color(dynamic response) => getJsonField(
+        response,
+        r'''$.data[:].color''',
+        true,
+      );
+  dynamic createdAt(dynamic response) => getJsonField(
+        response,
+        r'''$.data[:].created_at''',
+        true,
+      );
 }
 
 class AddDriverCall {

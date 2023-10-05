@@ -1,7 +1,7 @@
-import '/backend/supabase/supabase.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/components/command_palette/command_palette_widget.dart';
-import '/components/dropdown_user_edit/dropdown_user_edit_widget.dart';
-import '/components/modals/create_customer/create_customer_widget.dart';
+import '/components/dropdown_driver_edit/dropdown_driver_edit_widget.dart';
+import '/components/modals/create_driver/create_driver_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
@@ -181,7 +181,7 @@ class _MainDriversListWidgetState extends State<MainDriversListWidget>
                                           ? FocusScope.of(context)
                                               .requestFocus(_model.unfocusNode)
                                           : FocusScope.of(context).unfocus(),
-                                      child: CreateCustomerWidget(),
+                                      child: CreateDriverWidget(),
                                     ),
                                   );
                                 },
@@ -380,7 +380,7 @@ class _MainDriversListWidgetState extends State<MainDriversListWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '4cx2y00u' /* Title */,
+                                                              '4cx2y00u' /* Model */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -412,7 +412,7 @@ class _MainDriversListWidgetState extends State<MainDriversListWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'wonh8oo3' /* Company */,
+                                                              'wonh8oo3' /* Color */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -439,7 +439,7 @@ class _MainDriversListWidgetState extends State<MainDriversListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'vx6kv4a3' /* Status */,
+                                                            'vx6kv4a3' /* Car Number */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -464,10 +464,10 @@ class _MainDriversListWidgetState extends State<MainDriversListWidget>
                                               ),
                                             ),
                                           ),
-                                          FutureBuilder<List<CustomersRow>>(
-                                            future: CustomersTable().queryRows(
-                                              queryFn: (q) => q.order('id'),
-                                            ),
+                                          FutureBuilder<ApiCallResponse>(
+                                            future: DriversEDGEGroup
+                                                .getDriversCall
+                                                .call(),
                                             builder: (context, snapshot) {
                                               // Customize what your widget looks like when it's loading.
                                               if (!snapshot.hasData) {
@@ -488,307 +488,336 @@ class _MainDriversListWidgetState extends State<MainDriversListWidget>
                                                   ),
                                                 );
                                               }
-                                              List<CustomersRow>
-                                                  listViewCustomersRowList =
+                                              final listViewGetDriversResponse =
                                                   snapshot.data!;
-                                              return ListView.builder(
-                                                padding: EdgeInsets.fromLTRB(
-                                                  0,
-                                                  0,
-                                                  0,
-                                                  70.0,
-                                                ),
-                                                shrinkWrap: true,
-                                                scrollDirection: Axis.vertical,
-                                                itemCount:
-                                                    listViewCustomersRowList
-                                                        .length,
-                                                itemBuilder:
-                                                    (context, listViewIndex) {
-                                                  final listViewCustomersRow =
-                                                      listViewCustomersRowList[
-                                                          listViewIndex];
-                                                  return Padding(
+                                              return Builder(
+                                                builder: (context) {
+                                                  final drivers =
+                                                      DriversEDGEGroup
+                                                              .getDriversCall
+                                                              .data(
+                                                                listViewGetDriversResponse
+                                                                    .jsonBody,
+                                                              )
+                                                              ?.toList() ??
+                                                          [];
+                                                  return ListView.builder(
                                                     padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(16.0, 8.0,
-                                                                16.0, 0.0),
-                                                    child: InkWell(
-                                                      splashColor:
-                                                          Colors.transparent,
-                                                      focusColor:
-                                                          Colors.transparent,
-                                                      hoverColor:
-                                                          Colors.transparent,
-                                                      highlightColor:
-                                                          Colors.transparent,
-                                                      onTap: () async {
-                                                        logFirebaseEvent(
-                                                            'MAIN_DRIVERS_LIST_Container_g0ll9a0m_ON_');
-                                                        await action_blocks
-                                                            .openUserDetails(
-                                                                context);
-                                                      },
-                                                      child: Container(
-                                                        width: double.infinity,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryBackground,
-                                                          boxShadow: [
-                                                            BoxShadow(
-                                                              blurRadius: 3.0,
-                                                              color: Color(
-                                                                  0x20000000),
-                                                              offset: Offset(
-                                                                  0.0, 1.0),
-                                                            )
-                                                          ],
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      12.0),
-                                                        ),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      8.0,
-                                                                      8.0,
-                                                                      12.0,
-                                                                      8.0),
-                                                          child: Row(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .center,
-                                                            children: [
-                                                              Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
+                                                        EdgeInsets.fromLTRB(
+                                                      0,
+                                                      0,
+                                                      0,
+                                                      70.0,
+                                                    ),
+                                                    shrinkWrap: true,
+                                                    scrollDirection:
+                                                        Axis.vertical,
+                                                    itemCount: drivers.length,
+                                                    itemBuilder: (context,
+                                                        driversIndex) {
+                                                      final driversItem =
+                                                          drivers[driversIndex];
+                                                      return Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    16.0,
+                                                                    8.0,
+                                                                    16.0,
+                                                                    0.0),
+                                                        child: InkWell(
+                                                          splashColor: Colors
+                                                              .transparent,
+                                                          focusColor: Colors
+                                                              .transparent,
+                                                          hoverColor: Colors
+                                                              .transparent,
+                                                          highlightColor: Colors
+                                                              .transparent,
+                                                          onTap: () async {
+                                                            logFirebaseEvent(
+                                                                'MAIN_DRIVERS_LIST_Container_g0ll9a0m_ON_');
+                                                            await action_blocks
+                                                                .openUserDetails(
+                                                                    context);
+                                                          },
+                                                          child: Container(
+                                                            width:
+                                                                double.infinity,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondaryBackground,
+                                                              boxShadow: [
+                                                                BoxShadow(
+                                                                  blurRadius:
+                                                                      3.0,
+                                                                  color: Color(
+                                                                      0x20000000),
+                                                                  offset:
+                                                                      Offset(
+                                                                          0.0,
+                                                                          1.0),
+                                                                )
+                                                              ],
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          12.0),
+                                                            ),
+                                                            child: Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          8.0,
+                                                                          8.0,
+                                                                          12.0,
+                                                                          8.0),
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
                                                                             0.0),
-                                                                child: Text(
-                                                                  listViewCustomersRow
-                                                                      .id
-                                                                      .toString(),
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium,
-                                                                ),
-                                                              ),
-                                                              ClipRRect(
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
+                                                                    child: Text(
+                                                                      getJsonField(
+                                                                        driversItem,
+                                                                        r'''$.id''',
+                                                                      ).toString(),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium,
+                                                                    ),
+                                                                  ),
+                                                                  ClipRRect(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
                                                                             8.0),
-                                                                child: Image
-                                                                    .network(
-                                                                  'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
-                                                                  width: 70.0,
-                                                                  height: 70.0,
-                                                                  fit: BoxFit
-                                                                      .cover,
-                                                                ),
-                                                              ),
-                                                              Expanded(
-                                                                child: Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [
-                                                                    Expanded(
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            16.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Text(
-                                                                          listViewCustomersRow
-                                                                              .name!,
-                                                                          style:
-                                                                              FlutterFlowTheme.of(context).bodyLarge,
-                                                                        ),
-                                                                      ),
+                                                                    child: Image
+                                                                        .network(
+                                                                      'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+                                                                      width:
+                                                                          70.0,
+                                                                      height:
+                                                                          70.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
                                                                     ),
-                                                                    if (responsiveVisibility(
-                                                                      context:
-                                                                          context,
-                                                                      phone:
-                                                                          false,
-                                                                      tablet:
-                                                                          false,
-                                                                    ))
-                                                                      Expanded(
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              16.0,
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0),
+                                                                  ),
+                                                                  Expanded(
+                                                                    child: Row(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      children: [
+                                                                        Expanded(
                                                                           child:
-                                                                              Text(
-                                                                            listViewCustomersRow.title!,
-                                                                            style:
-                                                                                FlutterFlowTheme.of(context).bodyMedium,
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    if (responsiveVisibility(
-                                                                      context:
-                                                                          context,
-                                                                      phone:
-                                                                          false,
-                                                                      tablet:
-                                                                          false,
-                                                                    ))
-                                                                      Expanded(
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              16.0,
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Text(
-                                                                            listViewCustomersRow.company!,
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
-                                                                                  fontSize: 14.0,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    Expanded(
-                                                                      child:
-                                                                          Row(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.max,
-                                                                        mainAxisAlignment:
-                                                                            MainAxisAlignment.end,
-                                                                        children: [
-                                                                          Container(
-                                                                            height:
-                                                                                32.0,
-                                                                            decoration:
-                                                                                BoxDecoration(
-                                                                              color: FlutterFlowTheme.of(context).accent2,
-                                                                              borderRadius: BorderRadius.circular(8.0),
-                                                                              border: Border.all(
-                                                                                color: FlutterFlowTheme.of(context).secondary,
-                                                                              ),
-                                                                            ),
+                                                                              Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                16.0,
+                                                                                0.0,
+                                                                                0.0,
+                                                                                0.0),
                                                                             child:
-                                                                                Align(
-                                                                              alignment: AlignmentDirectional(0.00, 0.00),
-                                                                              child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-                                                                                child: Text(
-                                                                                  listViewCustomersRow.status!,
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium,
-                                                                                ),
+                                                                                Text(
+                                                                              '${getJsonField(
+                                                                                driversItem,
+                                                                                r'''$.first_name''',
+                                                                              ).toString()} ${getJsonField(
+                                                                                driversItem,
+                                                                                r'''$.last_name''',
+                                                                              ).toString()}',
+                                                                              style: FlutterFlowTheme.of(context).bodyLarge,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        if (responsiveVisibility(
+                                                                          context:
+                                                                              context,
+                                                                          phone:
+                                                                              false,
+                                                                          tablet:
+                                                                              false,
+                                                                        ))
+                                                                          Expanded(
+                                                                            child:
+                                                                                Padding(
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                                                                              child: Text(
+                                                                                getJsonField(
+                                                                                  driversItem,
+                                                                                  r'''$.model''',
+                                                                                ).toString(),
+                                                                                style: FlutterFlowTheme.of(context).bodyMedium,
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ],
-                                                                      ),
+                                                                        if (responsiveVisibility(
+                                                                          context:
+                                                                              context,
+                                                                          phone:
+                                                                              false,
+                                                                          tablet:
+                                                                              false,
+                                                                        ))
+                                                                          Expanded(
+                                                                            child:
+                                                                                Padding(
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                                                                              child: Text(
+                                                                                getJsonField(
+                                                                                  driversItem,
+                                                                                  r'''$.color''',
+                                                                                ).toString(),
+                                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                      fontFamily: 'Plus Jakarta Sans',
+                                                                                      fontSize: 14.0,
+                                                                                    ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        Expanded(
+                                                                          child:
+                                                                              Row(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.end,
+                                                                            children: [
+                                                                              Container(
+                                                                                height: 32.0,
+                                                                                decoration: BoxDecoration(
+                                                                                  color: FlutterFlowTheme.of(context).accent2,
+                                                                                  borderRadius: BorderRadius.circular(8.0),
+                                                                                  border: Border.all(
+                                                                                    color: FlutterFlowTheme.of(context).secondary,
+                                                                                  ),
+                                                                                ),
+                                                                                child: Align(
+                                                                                  alignment: AlignmentDirectional(0.00, 0.00),
+                                                                                  child: Padding(
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                    child: Text(
+                                                                                      getJsonField(
+                                                                                        driversItem,
+                                                                                        r'''$.car_number''',
+                                                                                      ).toString(),
+                                                                                      style: FlutterFlowTheme.of(context).bodyMedium,
+                                                                                    ),
+                                                                                  ),
+                                                                                ),
+                                                                              ),
+                                                                            ],
+                                                                          ),
+                                                                        ),
+                                                                      ],
                                                                     ),
-                                                                  ],
-                                                                ),
-                                                              ),
-                                                              Builder(
-                                                                builder:
-                                                                    (context) =>
-                                                                        Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
+                                                                  ),
+                                                                  Builder(
+                                                                    builder:
+                                                                        (context) =>
+                                                                            Padding(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           12.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                                  child:
-                                                                      InkWell(
-                                                                    splashColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    focusColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    hoverColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    highlightColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    onTap:
-                                                                        () async {
-                                                                      logFirebaseEvent(
-                                                                          'MAIN_DRIVERS_LIST_Icon_8wduasjk_ON_TAP');
-                                                                      await showAlignedDialog(
-                                                                        barrierColor:
+                                                                      child:
+                                                                          InkWell(
+                                                                        splashColor:
                                                                             Colors.transparent,
-                                                                        context:
-                                                                            context,
-                                                                        isGlobal:
-                                                                            false,
-                                                                        avoidOverflow:
-                                                                            true,
-                                                                        targetAnchor:
-                                                                            AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
-                                                                        followerAnchor:
-                                                                            AlignmentDirectional(1.0, -1.0).resolve(Directionality.of(context)),
-                                                                        builder:
-                                                                            (dialogContext) {
-                                                                          return Material(
-                                                                            color:
+                                                                        focusColor:
+                                                                            Colors.transparent,
+                                                                        hoverColor:
+                                                                            Colors.transparent,
+                                                                        highlightColor:
+                                                                            Colors.transparent,
+                                                                        onTap:
+                                                                            () async {
+                                                                          logFirebaseEvent(
+                                                                              'MAIN_DRIVERS_LIST_Icon_8wduasjk_ON_TAP');
+                                                                          await showAlignedDialog(
+                                                                            barrierColor:
                                                                                 Colors.transparent,
-                                                                            child:
-                                                                                GestureDetector(
-                                                                              onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                              child: DropdownUserEditWidget(
-                                                                                id: listViewCustomersRow.id,
-                                                                                title: listViewCustomersRow.title!,
-                                                                                name: listViewCustomersRow.name!,
-                                                                                company: listViewCustomersRow.company!,
-                                                                                status: listViewCustomersRow.status!,
-                                                                              ),
-                                                                            ),
-                                                                          );
+                                                                            context:
+                                                                                context,
+                                                                            isGlobal:
+                                                                                false,
+                                                                            avoidOverflow:
+                                                                                true,
+                                                                            targetAnchor:
+                                                                                AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                            followerAnchor:
+                                                                                AlignmentDirectional(1.0, -1.0).resolve(Directionality.of(context)),
+                                                                            builder:
+                                                                                (dialogContext) {
+                                                                              return Material(
+                                                                                color: Colors.transparent,
+                                                                                child: GestureDetector(
+                                                                                  onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
+                                                                                  child: DropdownDriverEditWidget(
+                                                                                    id: getJsonField(
+                                                                                      driversItem,
+                                                                                      r'''$.id''',
+                                                                                    ),
+                                                                                    firstName: getJsonField(
+                                                                                      driversItem,
+                                                                                      r'''$.first_name''',
+                                                                                    ).toString(),
+                                                                                    lastName: getJsonField(
+                                                                                      driversItem,
+                                                                                      r'''$.last_name''',
+                                                                                    ).toString(),
+                                                                                    model: getJsonField(
+                                                                                      driversItem,
+                                                                                      r'''$.model''',
+                                                                                    ).toString(),
+                                                                                    color: getJsonField(
+                                                                                      driversItem,
+                                                                                      r'''$.color''',
+                                                                                    ).toString(),
+                                                                                    carNumber: getJsonField(
+                                                                                      driversItem,
+                                                                                      r'''$.car_number''',
+                                                                                    ).toString(),
+                                                                                  ),
+                                                                                ),
+                                                                              );
+                                                                            },
+                                                                          ).then((value) =>
+                                                                              setState(() {}));
                                                                         },
-                                                                      ).then((value) =>
-                                                                          setState(
-                                                                              () {}));
-                                                                    },
-                                                                    child: Icon(
-                                                                      Icons
-                                                                          .more_vert,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryText,
-                                                                      size:
-                                                                          24.0,
+                                                                        child:
+                                                                            Icon(
+                                                                          Icons
+                                                                              .more_vert,
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).secondaryText,
+                                                                          size:
+                                                                              24.0,
+                                                                        ),
+                                                                      ),
                                                                     ),
                                                                   ),
-                                                                ),
+                                                                ],
                                                               ),
-                                                            ],
+                                                            ),
                                                           ),
-                                                        ),
-                                                      ),
-                                                    ).animateOnPageLoad(
-                                                        animationsMap[
-                                                            'containerOnPageLoadAnimation']!),
+                                                        ).animateOnPageLoad(
+                                                            animationsMap[
+                                                                'containerOnPageLoadAnimation']!),
+                                                      );
+                                                    },
                                                   );
                                                 },
                                               );
