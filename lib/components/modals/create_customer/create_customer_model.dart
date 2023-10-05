@@ -24,7 +24,7 @@ class CreateCustomerModel extends FlutterFlowModel<CreateCustomerWidget> {
   String? _textController1Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'x8nu504w' /* Field is required */,
+        '2yj4607n' /* Field is required */,
       );
     }
 
@@ -37,7 +37,7 @@ class CreateCustomerModel extends FlutterFlowModel<CreateCustomerWidget> {
   String? _textController2Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        't42oa1vk' /* Field is required */,
+        't887bpk5' /* Field is required */,
       );
     }
 

@@ -715,7 +715,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'گاہکوں',
     },
     'b7er5pp3': {
-      'en': 'Invite Users',
+      'en': 'Export as CSV',
       'bn': 'ব্যবহারকারীদের আমন্ত্রণ',
       'hi': 'उपयोगकर्ताओं को आमंत्रित करें',
       'ml': 'ഉപയോക്താക്കളെ ക്ഷണിക്കുക',
@@ -2184,7 +2184,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'సేవ్ చేయండి',
       'ur': 'محفوظ کریں۔',
     },
-    'zbfc2hm5': {
+    'a6283r27': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -2194,7 +2194,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '553dgn5w': {
+    'uay30nt6': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -2204,7 +2204,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'zt0xhi0h': {
+    '3nre9rp0': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -2214,7 +2214,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '67zjxwd8': {
+    'vg1s8o8n': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -2287,7 +2287,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'సేవ్ చేయండి',
       'ur': 'محفوظ کریں۔',
     },
-    'yvxu6njj': {
+    'efk62qus': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -2297,7 +2297,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'iz5gy257': {
+    'xyv2nsuo': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -2307,7 +2307,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '1yzw3m1u': {
+    'sbr6mir7': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -2317,7 +2317,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'k5892icw': {
+    '5p68hm1r': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -4539,7 +4539,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'కస్టమర్‌ని సృష్టించండి',
       'ur': 'گاہک بنائیں',
     },
-    'pgew88kh': {
+    'bskorpwo': {
       'en': 'Name',
       'bn': '',
       'hi': '',
@@ -4549,7 +4549,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'hzm0dpp0': {
+    'm9pf6l09': {
       'en': 'Title',
       'bn': '',
       'hi': '',
@@ -4629,7 +4629,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'వస్తువు కోసం వెతకండి...',
       'ur': 'ایک آئٹم تلاش کریں...',
     },
-    't42oa1vk': {
+    't887bpk5': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -4639,7 +4639,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '4qtt1w2n': {
+    '8k52cxb7': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -4649,7 +4649,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'x8nu504w': {
+    '2yj4607n': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -4659,7 +4659,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'dvo9sifi': {
+    '831gmn1j': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -4725,7 +4725,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'కస్టమర్‌ని సవరించండి',
       'ur': 'کسٹمر میں ترمیم کریں۔',
     },
-    'pesrur3v': {
+    'xzirpmrx': {
       'en': 'Title',
       'bn': '',
       'hi': '',
@@ -4735,7 +4735,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    't8i2z4co': {
+    'igyh3hiq': {
       'en': 'Name',
       'bn': '',
       'hi': '',
@@ -4745,7 +4745,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '9yezka2s': {
+    'e3xuaoc5': {
       'en': 'Company',
       'bn': '',
       'hi': '',
@@ -4795,7 +4795,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'వస్తువు కోసం వెతకండి...',
       'ur': 'ایک آئٹم تلاش کریں...',
     },
-    'f0u9r7dq': {
+    'huyhdp0t': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -4805,7 +4805,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'veqahved': {
+    'p7eipljo': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -4815,7 +4815,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'qt6c54xw': {
+    '560ywihp': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -4825,7 +4825,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '12pahlz7': {
+    'zr2zd5cj': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -4835,7 +4835,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'k48a87vw': {
+    'ihiq5k7b': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -4845,7 +4845,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '18cocm9p': {
+    '4cjpwz5q': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -5067,7 +5067,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థానం',
       'ur': 'مقام',
     },
-    '8a2y5ac4': {
+    'uzi0baih': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -5077,7 +5077,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'b6mrzdrx': {
+    'f72q22uy': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -5087,7 +5087,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'pw5ot9ix': {
+    '6wvbn5uf': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -5097,7 +5097,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'b316ghwy': {
+    'mb4175yr': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -5107,7 +5107,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '0imtmdul': {
+    'ekv4q9gg': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -5117,7 +5117,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'mkjsi81i': {
+    'yxbnqiod': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -5127,7 +5127,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'rvt1g2vs': {
+    'fzr5xfnn': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -5137,7 +5137,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '0y25uk0p': {
+    'stoeq1i7': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -5147,7 +5147,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'yek5rm31': {
+    'jtvkyrza': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -5157,7 +5157,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'gvg8o2rk': {
+    'w2o3ozh4': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -5273,7 +5273,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థానం',
       'ur': 'مقام',
     },
-    '1qdoz4wl': {
+    'ep8jgc5a': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -5283,7 +5283,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '7a6txbpi': {
+    '7qo76o6l': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -5293,7 +5293,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'qav4gmz3': {
+    'w2dec98s': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -5303,7 +5303,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'pa3dndmq': {
+    'arod0ha8': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -5313,7 +5313,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'tr2wffia': {
+    'aqxbkkoa': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -5323,7 +5323,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '7z5t7nfy': {
+    'wqoxtu0c': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -5333,7 +5333,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'a2vlumgu': {
+    'rb09oruq': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -5343,7 +5343,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'd7r4rkpw': {
+    '7dae6h1g': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',
@@ -5353,7 +5353,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'ura1zrc1': {
+    'rvcdaddl': {
       'en': 'Field is required',
       'bn': '',
       'hi': '',
@@ -5363,7 +5363,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    'pxin82cb': {
+    'nciiuihe': {
       'en': 'Please choose an option from the dropdown',
       'bn': '',
       'hi': '',

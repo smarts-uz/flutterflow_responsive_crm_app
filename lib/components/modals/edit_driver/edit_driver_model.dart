@@ -18,7 +18,7 @@ class EditDriverModel extends FlutterFlowModel<EditDriverWidget> {
   String? _textController1Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '8a2y5ac4' /* Field is required */,
+        'uzi0baih' /* Field is required */,
       );
     }
 
@@ -31,7 +31,7 @@ class EditDriverModel extends FlutterFlowModel<EditDriverWidget> {
   String? _textController2Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'pw5ot9ix' /* Field is required */,
+        '6wvbn5uf' /* Field is required */,
       );
     }
 
@@ -44,7 +44,7 @@ class EditDriverModel extends FlutterFlowModel<EditDriverWidget> {
   String? _textController3Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '0imtmdul' /* Field is required */,
+        'ekv4q9gg' /* Field is required */,
       );
     }
 
@@ -57,7 +57,7 @@ class EditDriverModel extends FlutterFlowModel<EditDriverWidget> {
   String? _textController4Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'rvt1g2vs' /* Field is required */,
+        'fzr5xfnn' /* Field is required */,
       );
     }
 
@@ -70,7 +70,7 @@ class EditDriverModel extends FlutterFlowModel<EditDriverWidget> {
   String? _textController5Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'yek5rm31' /* Field is required */,
+        'jtvkyrza' /* Field is required */,
       );
     }
 

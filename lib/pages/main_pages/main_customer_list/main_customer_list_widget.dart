@@ -2,7 +2,6 @@ import '/backend/supabase/supabase.dart';
 import '/components/command_palette/command_palette_widget.dart';
 import '/components/dropdown_user_edit/dropdown_user_edit_widget.dart';
 import '/components/modals/create_customer/create_customer_widget.dart';
-import '/components/modals_extra/modal_share_project/modal_share_project_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
@@ -11,6 +10,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/actions/actions.dart' as action_blocks;
+import '/custom_code/actions/index.dart' as actions;
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -196,65 +196,65 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                           phone: false,
                           tablet: false,
                         ))
-                          Builder(
-                            builder: (context) => FFButtonWidget(
-                              onPressed: () async {
-                                logFirebaseEvent(
-                                    'MAIN_CUSTOMER_LIST_INVITE_USERS_BTN_ON_T');
-                                await showAlignedDialog(
-                                  barrierColor: Colors.transparent,
-                                  context: context,
-                                  isGlobal: true,
-                                  avoidOverflow: false,
-                                  targetAnchor: AlignmentDirectional(0.0, 0.0)
-                                      .resolve(Directionality.of(context)),
-                                  followerAnchor: AlignmentDirectional(0.0, 0.0)
-                                      .resolve(Directionality.of(context)),
-                                  builder: (dialogContext) {
-                                    return Material(
-                                      color: Colors.transparent,
-                                      child: GestureDetector(
-                                        onTap: () => _model
-                                                .unfocusNode.canRequestFocus
-                                            ? FocusScope.of(context)
-                                                .requestFocus(
-                                                    _model.unfocusNode)
-                                            : FocusScope.of(context).unfocus(),
-                                        child: ModalShareProjectWidget(),
-                                      ),
-                                    );
-                                  },
-                                ).then((value) => setState(() {}));
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'b7er5pp3' /* Invite Users */,
-                              ),
-                              options: FFButtonOptions(
-                                height: 44.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
-                                textStyle:
-                                    FlutterFlowTheme.of(context).titleSmall,
-                                elevation: 3.0,
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1.0,
-                                ),
-                                borderRadius: BorderRadius.circular(12.0),
-                                hoverColor:
-                                    FlutterFlowTheme.of(context).accent1,
-                                hoverBorderSide: BorderSide(
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  width: 1.0,
-                                ),
-                                hoverTextColor:
-                                    FlutterFlowTheme.of(context).primaryText,
-                                hoverElevation: 0.0,
-                              ),
+                          FutureBuilder<List<CustomersRow>>(
+                            future: CustomersTable().queryRows(
+                              queryFn: (q) => q,
                             ),
+                            builder: (context, snapshot) {
+                              // Customize what your widget looks like when it's loading.
+                              if (!snapshot.hasData) {
+                                return Center(
+                                  child: SizedBox(
+                                    width: 50.0,
+                                    height: 50.0,
+                                    child: CircularProgressIndicator(
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                        FlutterFlowTheme.of(context).primary,
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              }
+                              List<CustomersRow> buttonCustomersRowList =
+                                  snapshot.data!;
+                              return FFButtonWidget(
+                                onPressed: () async {
+                                  logFirebaseEvent(
+                                      'MAIN_CUSTOMER_LIST_EXPORT_AS_C_S_V_BTN_O');
+                                  await actions.downloadCollectionAsCSV(
+                                    buttonCustomersRowList.toList(),
+                                  );
+                                },
+                                text: FFLocalizations.of(context).getText(
+                                  'b7er5pp3' /* Export as CSV */,
+                                ),
+                                options: FFButtonOptions(
+                                  height: 44.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      24.0, 0.0, 24.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  textStyle:
+                                      FlutterFlowTheme.of(context).titleSmall,
+                                  elevation: 3.0,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                  hoverColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  hoverBorderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    width: 1.0,
+                                  ),
+                                  hoverTextColor:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  hoverElevation: 0.0,
+                                ),
+                              );
+                            },
                           ),
                         Builder(
                           builder: (context) => FlutterFlowIconButton(

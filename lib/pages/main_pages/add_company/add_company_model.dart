@@ -23,7 +23,7 @@ class AddCompanyModel extends FlutterFlowModel<AddCompanyWidget> {
   String? _textController1Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'zbfc2hm5' /* Field is required */,
+        'a6283r27' /* Field is required */,
       );
     }
 
@@ -36,7 +36,7 @@ class AddCompanyModel extends FlutterFlowModel<AddCompanyWidget> {
   String? _textController2Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'zt0xhi0h' /* Field is required */,
+        '3nre9rp0' /* Field is required */,
       );
     }
 
