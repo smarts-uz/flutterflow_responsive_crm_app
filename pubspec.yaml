@@ -31,6 +31,7 @@ dependencies:
   cached_network_image: 3.2.1
   dropdown_button2: 2.0.0
   emoji_flag_converter: 1.1.0
+  equatable: 2.0.5
   firebase_analytics: 10.4.2
   firebase_analytics_platform_interface: 3.6.2
   firebase_analytics_web: 0.5.4+2
@@ -51,6 +52,7 @@ dependencies:
   hive: 2.2.3
   intl: 0.18.0
   json_path: 0.6.2
+  mime_type: 1.0.0
   octo_image: 1.0.2
   page_transition: 2.0.4
   path_provider: 2.0.14

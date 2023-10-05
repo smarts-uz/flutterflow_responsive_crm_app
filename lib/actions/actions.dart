@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_manager.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/modal_sections/modal_user/modal_user_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
