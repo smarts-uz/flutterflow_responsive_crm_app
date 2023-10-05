@@ -190,6 +190,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 location: params.getParam('location', ParamType.String),
                 founded: params.getParam('founded', ParamType.DateTime),
               ),
+            ),
+            FFRoute(
+              name: 'Main_driversList',
+              path: 'mainDriversList',
+              builder: (context, params) => MainDriversListWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

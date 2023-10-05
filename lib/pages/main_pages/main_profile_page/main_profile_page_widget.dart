@@ -134,7 +134,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                     model: _model.webNavModel,
                     updateCallback: () => setState(() {}),
                     child: WebNavWidget(
-                      selectedNav: 6,
+                      selectedNav: 7,
                     ),
                   ),
                 Expanded(

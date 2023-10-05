@@ -114,7 +114,7 @@ class _MainCompaniesListWidgetState extends State<MainCompaniesListWidget>
                 model: _model.webNavModel,
                 updateCallback: () => setState(() {}),
                 child: WebNavWidget(
-                  selectedNav: 3,
+                  selectedNav: 4,
                 ),
               ),
             Expanded(

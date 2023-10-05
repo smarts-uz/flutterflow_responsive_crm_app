@@ -140,7 +140,7 @@ class _MainMessagesWidgetState extends State<MainMessagesWidget>
                       model: _model.webNavModel,
                       updateCallback: () => setState(() {}),
                       child: WebNavWidget(
-                        selectedNav: 5,
+                        selectedNav: 6,
                       ),
                     ),
                   Expanded(

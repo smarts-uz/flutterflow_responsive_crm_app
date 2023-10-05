@@ -271,7 +271,7 @@ class _MainContractsWidgetState extends State<MainContractsWidget>
                       model: _model.webNavModel,
                       updateCallback: () => setState(() {}),
                       child: WebNavWidget(
-                        selectedNav: 4,
+                        selectedNav: 5,
                       ),
                     ),
                   Expanded(

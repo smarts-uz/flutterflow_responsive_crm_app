@@ -355,7 +355,7 @@ class _ModalCreateCompanyWidgetState extends State<ModalCreateCompanyWidget>
                               labelStyle:
                                   FlutterFlowTheme.of(context).labelMedium,
                               hintText: FFLocalizations.of(context).getText(
-                                'upiv57pd' /* Enter in your website without ... */,
+                                '3atzw7zp' /* Enter in your website without ... */,
                               ),
                               hintStyle:
                                   FlutterFlowTheme.of(context).labelMedium,

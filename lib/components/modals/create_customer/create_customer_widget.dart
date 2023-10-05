@@ -312,15 +312,8 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                             .map((e) => e.title)
                                             .withoutNulls
                                             .toList(),
-                                        onChanged: (val) async {
-                                          setState(() =>
-                                              _model.dropDownValue1 = val);
-                                          logFirebaseEvent(
-                                              'CREATE_CUSTOMER_DropDown_1wdgwi4z_ON_FOR');
-                                          setState(() {
-                                            _model.selectedCompanyId = 0;
-                                          });
-                                        },
+                                        onChanged: (val) => setState(
+                                            () => _model.dropDownValue1 = val),
                                         width: double.infinity,
                                         height: 50.0,
                                         textStyle: FlutterFlowTheme.of(context)

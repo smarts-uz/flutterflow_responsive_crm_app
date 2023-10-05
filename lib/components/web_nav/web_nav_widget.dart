@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'web_nav_model.dart';
@@ -289,7 +290,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                     logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
 
                     context.pushNamed(
-                      'Main_companiesList',
+                      'Main_driversList',
                       extra: <String, dynamic>{
                         kTransitionInfoKey: TransitionInfo(
                           hasTransition: true,
@@ -314,9 +315,77 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          FaIcon(
+                            FontAwesomeIcons.car,
+                            color: widget.selectedNav == 3
+                                ? FlutterFlowTheme.of(context).primary
+                                : FlutterFlowTheme.of(context).secondaryText,
+                            size: 28.0,
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                12.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'ks7j5apt' /* Drivers */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .labelLarge
+                                  .override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    color: widget.selectedNav == 3
+                                        ? FlutterFlowTheme.of(context)
+                                            .primaryText
+                                        : FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
+
+                    context.pushNamed(
+                      'Main_companiesList',
+                      extra: <String, dynamic>{
+                        kTransitionInfoKey: TransitionInfo(
+                          hasTransition: true,
+                          transitionType: PageTransitionType.fade,
+                          duration: Duration(milliseconds: 0),
+                        ),
+                      },
+                    );
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: widget.selectedNav == 4
+                          ? FlutterFlowTheme.of(context).alternate
+                          : FlutterFlowTheme.of(context).secondaryBackground,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
                           Icon(
                             Icons.business_rounded,
-                            color: widget.selectedNav == 3
+                            color: widget.selectedNav == 4
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -332,7 +401,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                                   .labelLarge
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: widget.selectedNav == 3
+                                    color: widget.selectedNav == 4
                                         ? FlutterFlowTheme.of(context)
                                             .primaryText
                                         : FlutterFlowTheme.of(context)
@@ -370,7 +439,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: widget.selectedNav == 4
+                      color: widget.selectedNav == 5
                           ? FlutterFlowTheme.of(context).alternate
                           : FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
@@ -384,7 +453,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                         children: [
                           Icon(
                             Icons.document_scanner_rounded,
-                            color: widget.selectedNav == 4
+                            color: widget.selectedNav == 5
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -400,7 +469,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                                   .labelLarge
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: widget.selectedNav == 4
+                                    color: widget.selectedNav == 5
                                         ? FlutterFlowTheme.of(context)
                                             .primaryText
                                         : FlutterFlowTheme.of(context)
@@ -438,7 +507,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: widget.selectedNav == 5
+                      color: widget.selectedNav == 6
                           ? FlutterFlowTheme.of(context).alternate
                           : FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
@@ -452,7 +521,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                         children: [
                           Icon(
                             Icons.forum_outlined,
-                            color: widget.selectedNav == 5
+                            color: widget.selectedNav == 6
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -468,7 +537,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                                   .labelLarge
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: widget.selectedNav == 5
+                                    color: widget.selectedNav == 6
                                         ? FlutterFlowTheme.of(context)
                                             .primaryText
                                         : FlutterFlowTheme.of(context)
@@ -506,7 +575,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: widget.selectedNav == 6
+                      color: widget.selectedNav == 7
                           ? FlutterFlowTheme.of(context).alternate
                           : FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
@@ -520,7 +589,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                         children: [
                           Icon(
                             Icons.account_circle_rounded,
-                            color: widget.selectedNav == 6
+                            color: widget.selectedNav == 7
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -536,7 +605,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                                   .labelLarge
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: widget.selectedNav == 6
+                                    color: widget.selectedNav == 7
                                         ? FlutterFlowTheme.of(context)
                                             .primaryText
                                         : FlutterFlowTheme.of(context)
