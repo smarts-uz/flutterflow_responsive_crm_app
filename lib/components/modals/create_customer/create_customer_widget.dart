@@ -153,7 +153,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'bskorpwo' /* Name */,
+                                        'pagm6q22' /* Name */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -220,7 +220,7 @@ class _CreateCustomerWidgetState extends State<CreateCustomerWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'm9pf6l09' /* Title */,
+                                        'uzaf8bw1' /* Title */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,

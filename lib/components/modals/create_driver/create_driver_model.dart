@@ -18,7 +18,7 @@ class CreateDriverModel extends FlutterFlowModel<CreateDriverWidget> {
   String? _textController1Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'ep8jgc5a' /* Field is required */,
+        'z70f4lxt' /* Field is required */,
       );
     }
 
@@ -31,7 +31,7 @@ class CreateDriverModel extends FlutterFlowModel<CreateDriverWidget> {
   String? _textController2Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'w2dec98s' /* Field is required */,
+        '0jeglkgw' /* Field is required */,
       );
     }
 
@@ -44,7 +44,7 @@ class CreateDriverModel extends FlutterFlowModel<CreateDriverWidget> {
   String? _textController3Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'aqxbkkoa' /* Field is required */,
+        'u028fihq' /* Field is required */,
       );
     }
 
@@ -57,7 +57,7 @@ class CreateDriverModel extends FlutterFlowModel<CreateDriverWidget> {
   String? _textController4Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'rb09oruq' /* Field is required */,
+        'nw2irdab' /* Field is required */,
       );
     }
 
@@ -70,7 +70,7 @@ class CreateDriverModel extends FlutterFlowModel<CreateDriverWidget> {
   String? _textController5Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'rvcdaddl' /* Field is required */,
+        '3zhkkp1g' /* Field is required */,
       );
     }
 

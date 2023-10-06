@@ -1,5 +1,5 @@
+import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
-import '/components/command_palette/command_palette_widget.dart';
 import '/components/dropdown_user_edit/dropdown_user_edit_widget.dart';
 import '/components/modals/create_customer/create_customer_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
@@ -13,6 +13,7 @@ import '/actions/actions.dart' as action_blocks;
 import '/custom_code/actions/index.dart' as actions;
 import 'main_customer_list_widget.dart' show MainCustomerListWidget;
 import 'package:aligned_dialog/aligned_dialog.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -25,6 +26,11 @@ class MainCustomerListModel extends FlutterFlowModel<MainCustomerListWidget> {
   final unfocusNode = FocusNode();
   // Model for webNav component.
   late WebNavModel webNavModel;
+  // State field(s) for TextField widget.
+  TextEditingController? textController;
+  String? Function(BuildContext, String?)? textControllerValidator;
+  // Stores action output result for [Backend Call - API (Search Customers)] action in TextField widget.
+  ApiCallResponse? searchCustomersResult;
   // State field(s) for TabBar widget.
   TabController? tabBarController;
   int get tabBarCurrentIndex =>
@@ -39,6 +45,7 @@ class MainCustomerListModel extends FlutterFlowModel<MainCustomerListWidget> {
   void dispose() {
     unfocusNode.dispose();
     webNavModel.dispose();
+    textController?.dispose();
     tabBarController?.dispose();
   }
 

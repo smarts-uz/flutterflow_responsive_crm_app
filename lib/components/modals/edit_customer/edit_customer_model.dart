@@ -20,7 +20,7 @@ class EditCustomerModel extends FlutterFlowModel<EditCustomerWidget> {
   String? _textController1Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'huyhdp0t' /* Field is required */,
+        'ii2nzz3m' /* Field is required */,
       );
     }
 
@@ -33,7 +33,7 @@ class EditCustomerModel extends FlutterFlowModel<EditCustomerWidget> {
   String? _textController2Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '560ywihp' /* Field is required */,
+        'zpgdssuu' /* Field is required */,
       );
     }
 
@@ -46,7 +46,7 @@ class EditCustomerModel extends FlutterFlowModel<EditCustomerWidget> {
   String? _textController3Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'ihiq5k7b' /* Field is required */,
+        '7rdl2i9r' /* Field is required */,
       );
     }
 

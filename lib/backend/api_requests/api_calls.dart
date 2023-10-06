@@ -190,6 +190,31 @@ class DeleteDriverCall {
 
 /// End Drivers EDGE Group Code
 
+class SearchCustomersCall {
+  static Future<ApiCallResponse> call({
+    String? searchString = '',
+  }) {
+    return ApiManager.instance.makeApiCall(
+      callName: 'Search Customers',
+      apiUrl: 'https://rftvbsvcljemoonofdhk.supabase.co/rest/v1/customers',
+      callType: ApiCallType.GET,
+      headers: {
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJmdHZic3ZjbGplbW9vbm9mZGhrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NTkxNjM0NCwiZXhwIjoyMDExNDkyMzQ0fQ.A_zMiZKDlo3wfHRlgM3nwImpWB-zXt93bqMbGis4zbA',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJmdHZic3ZjbGplbW9vbm9mZGhrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NTkxNjM0NCwiZXhwIjoyMDExNDkyMzQ0fQ.A_zMiZKDlo3wfHRlgM3nwImpWB-zXt93bqMbGis4zbA',
+      },
+      params: {
+        'name': searchString,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+}
+
 class ApiPagingParams {
   int nextPageNumber = 0;
   int numItems = 0;
