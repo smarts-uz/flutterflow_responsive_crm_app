@@ -32,3 +32,5 @@ export '/pages/main_pages/add_company/add_company_widget.dart'
     show AddCompanyWidget;
 export '/pages/main_pages/edit_company/edit_company_widget.dart'
     show EditCompanyWidget;
+export '/custom_data_tables/syncfusion_flutter_datagrid/syncfusion_flutter_datagrid_widget.dart'
+    show SyncfusionFlutterDatagridWidget;

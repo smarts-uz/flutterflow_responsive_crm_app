@@ -117,7 +117,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'Main_Home';
+  String _currentPageName = 'syncfusion_flutter_datagrid';
   late Widget? _currentPage;
 
   @override
@@ -132,10 +132,11 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'Main_Home': MainHomeWidget(),
       'Main_customerList': MainCustomerListWidget(),
-      'Main_companiesList': MainCompaniesListWidget(),
       'Main_Contracts': MainContractsWidget(),
       'Main_messages': MainMessagesWidget(),
       'Main_profilePage': MainProfilePageWidget(),
+      'Main_companiesList': MainCompaniesListWidget(),
+      'syncfusion_flutter_datagrid': SyncfusionFlutterDatagridWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -190,20 +191,6 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.home_work_outlined,
-                size: 24.0,
-              ),
-              activeIcon: Icon(
-                Icons.home_work,
-                size: 32.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                '89iqx991' /* __ */,
-              ),
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
                 Icons.document_scanner_outlined,
                 size: 24.0,
               ),
@@ -241,6 +228,30 @@ class _NavBarPageState extends State<NavBarPage> {
               ),
               label: FFLocalizations.of(context).getText(
                 'o3dp9tss' /* __ */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_work_outlined,
+                size: 24.0,
+              ),
+              activeIcon: Icon(
+                Icons.home_work,
+                size: 32.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                '89iqx991' /* __ */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.dataset_outlined,
+                size: 24.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                '1qcjjusz' /* DataTable */,
               ),
               tooltip: '',
             )

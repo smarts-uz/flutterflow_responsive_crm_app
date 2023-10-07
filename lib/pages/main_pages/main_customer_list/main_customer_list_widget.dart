@@ -328,7 +328,7 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: FFLocalizations.of(context).getText(
-                                'azdtrn1r' /* Search.... */,
+                                'v6tl4v0q' /* Search.... */,
                               ),
                               labelStyle:
                                   FlutterFlowTheme.of(context).labelMedium,

@@ -634,7 +634,8 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       }
 
                                       context.goNamedAuth(
-                                          'Main_Home', context.mounted);
+                                          'syncfusion_flutter_datagrid',
+                                          context.mounted);
                                     },
                                     text: FFLocalizations.of(context).getText(
                                       'm9klj9ah' /* Login */,

@@ -724,7 +724,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'వినియోగదారులను ఆహ్వానించండి',
       'ur': 'صارفین کو مدعو کریں۔',
     },
-    'azdtrn1r': {
+    'v6tl4v0q': {
       'en': 'Search....',
       'bn': '',
       'hi': '',
@@ -2356,6 +2356,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '__',
       'te': '__',
       'ur': '__',
+    },
+  },
+  // syncfusion_flutter_datagrid
+  {
+    '9gkmmspz': {
+      'en': 'syncfusion_flutter_datagrid',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
+    '1qcjjusz': {
+      'en': 'DataTable',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
     },
   },
   // modal_success

@@ -195,6 +195,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 location: params.getParam('location', ParamType.String),
                 founded: params.getParam('founded', ParamType.DateTime),
               ),
+            ),
+            FFRoute(
+              name: 'syncfusion_flutter_datagrid',
+              path: 'syncfusionFlutterDatagrid',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'syncfusion_flutter_datagrid')
+                  : SyncfusionFlutterDatagridWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
