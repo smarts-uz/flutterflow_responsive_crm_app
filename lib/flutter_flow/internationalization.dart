@@ -2360,7 +2360,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // syncfusion_flutter_datagrid
   {
-    '9gkmmspz': {
+    'j1k3s749': {
       'en': 'syncfusion_flutter_datagrid',
       'bn': '',
       'hi': '',
@@ -2370,7 +2370,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '1qcjjusz': {
+    'trzk1qup': {
       'en': 'DataTable',
       'bn': '',
       'hi': '',

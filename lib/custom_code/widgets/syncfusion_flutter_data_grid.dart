@@ -10,16 +10,19 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
 class SyncfusionFlutterDataGrid extends StatefulWidget {
   const SyncfusionFlutterDataGrid({
     Key? key,
     this.width,
     this.height,
+    this.customers,
   }) : super(key: key);
 
   final double? width;
   final double? height;
+  final List<CustomersRow>? customers;
 
   @override
   _SyncfusionFlutterDataGridState createState() =>
@@ -27,14 +30,14 @@ class SyncfusionFlutterDataGrid extends StatefulWidget {
 }
 
 class _SyncfusionFlutterDataGridState extends State<SyncfusionFlutterDataGrid> {
-  List<Employee> employees = <Employee>[];
-  late EmployeeDataSource employeeDataSource;
+  late List<CustomersRow> customers;
+  late CustomersDataSource customersDataSource;
 
   @override
   void initState() {
     super.initState();
-    employees = getEmployeeData();
-    employeeDataSource = EmployeeDataSource(employeeData: employees);
+    customers = widget.customers ?? [];
+    customersDataSource = CustomersDataSource(customersData: customers);
   }
 
   @override
@@ -42,110 +45,97 @@ class _SyncfusionFlutterDataGridState extends State<SyncfusionFlutterDataGrid> {
     return Container(
       width: widget.width,
       height: widget.height,
-      child: SfDataGrid(
-        source: employeeDataSource,
-        columnWidthMode: ColumnWidthMode.auto,
-        allowSorting: true,
-        columns: <GridColumn>[
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.all(16.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'ID',
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('Name'))),
-          GridColumn(
-              columnName: 'last_name',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('Last Name'))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('Salary'))),
-        ],
+      child: SfDataGridTheme(
+        data: SfDataGridThemeData(
+          sortIcon: Builder(
+            builder: (context) {
+              Widget? icon;
+              String columnName = '';
+              context.visitAncestorElements((element) {
+                if (element is GridHeaderCellElement) {
+                  columnName = element.column.columnName;
+                }
+                return true;
+              });
+              var column = customersDataSource.sortedColumns
+                  .where((element) => element.name == columnName)
+                  .firstOrNull;
+              if (column != null) {
+                if (column.sortDirection == DataGridSortDirection.ascending) {
+                  icon = const Icon(Icons.arrow_upward_rounded, size: 16);
+                } else if (column.sortDirection ==
+                    DataGridSortDirection.descending) {
+                  icon = const Icon(Icons.arrow_downward_rounded, size: 16);
+                }
+              }
+              return icon ?? const SizedBox();
+            },
+          ),
+        ),
+        child: SfDataGrid(
+          source: customersDataSource,
+          allowSorting: true,
+          columns: <GridColumn>[
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.all(16.0),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'ID',
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                columnWidthMode: ColumnWidthMode.lastColumnFill,
+                label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: Text('Name'))),
+            GridColumn(
+                columnName: 'title',
+                label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: Text('Title'))),
+            GridColumn(
+                columnName: 'company',
+                label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Company',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'status',
+                label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: Text('Status'))),
+          ],
+        ),
       ),
     );
   }
-
-  List<Employee> getEmployeeData() {
-    return [
-      Employee(10001, 'James', "Last Name", 'Project Lead', 20000),
-      Employee(10002, 'Kathryn', "Last Name", 'Manager', 30000),
-      Employee(10003, 'Lara', "Last Name", 'Developer', 15000),
-      Employee(10004, 'Michael', "Last Name", 'Designer', 15000),
-      Employee(10005, 'Martin', "Last Name", 'Developer', 15000),
-      Employee(10006, 'Newberry', "Last Name", 'Developer', 15000),
-      Employee(10007, 'Balnc', "Last Name", 'Developer', 15000),
-      Employee(10008, 'Perry', "Last Name", 'Developer', 15000),
-      Employee(10009, 'Gable', "Last Name", 'Developer', 15000),
-      Employee(10010, 'Grimes', "Last Name", 'Developer', 15000)
-    ];
-  }
 }
 
-/// Custom business object class which contains properties to hold the detailed
-/// information about the employee which will be rendered in datagrid.
-class Employee {
-  /// Creates the employee class with required details.
-  Employee(this.id, this.name, this.lastName, this.designation, this.salary);
-
-  /// Id of an employee.
-  final int id;
-
-  /// Name of an employee.
-  final String name;
-
-  /// Last Name
-  final String lastName;
-
-  /// Designation of an employee.
-  final String designation;
-
-  /// Salary of an employee.
-  final int salary;
-}
-
-/// An object to set the employee collection data source to the datagrid. This
-/// is used to map the employee data to the datagrid widget.
-class EmployeeDataSource extends DataGridSource {
-  /// Creates the employee data source class with required details.
-  EmployeeDataSource({required List<Employee> employeeData}) {
-    _employeeData = employeeData
+class CustomersDataSource extends DataGridSource {
+  CustomersDataSource({required List<CustomersRow> customersData}) {
+    _customersData = customersData
         .map<DataGridRow>((e) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: e.id),
               DataGridCell<String>(columnName: 'name', value: e.name),
-              DataGridCell<String>(columnName: 'last_name', value: e.lastName),
-              DataGridCell<String>(
-                  columnName: 'designation', value: e.designation),
-              DataGridCell<int>(columnName: 'salary', value: e.salary),
+              DataGridCell<String>(columnName: 'title', value: e.title),
+              DataGridCell<String>(columnName: 'company', value: e.company),
+              DataGridCell<String>(columnName: 'status', value: e.status),
             ]))
         .toList();
   }
 
-  List<DataGridRow> _employeeData = [];
+  List<DataGridRow> _customersData = [];
 
   @override
-  List<DataGridRow> get rows => _employeeData;
+  List<DataGridRow> get rows => _customersData;
 
   @override
   DataGridRowAdapter buildRow(DataGridRow row) {

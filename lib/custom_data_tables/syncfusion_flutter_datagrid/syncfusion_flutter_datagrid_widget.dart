@@ -1,3 +1,4 @@
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -53,7 +54,7 @@ class _SyncfusionFlutterDatagridWidgetState
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              '9gkmmspz' /* syncfusion_flutter_datagrid */,
+              'j1k3s749' /* syncfusion_flutter_datagrid */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium,
           ),
@@ -63,18 +64,37 @@ class _SyncfusionFlutterDatagridWidgetState
         ),
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Container(
+          child: FutureBuilder<List<CustomersRow>>(
+            future: CustomersTable().queryRows(
+              queryFn: (q) => q,
+            ),
+            builder: (context, snapshot) {
+              // Customize what your widget looks like when it's loading.
+              if (!snapshot.hasData) {
+                return Center(
+                  child: SizedBox(
+                    width: 50.0,
+                    height: 50.0,
+                    child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(
+                        FlutterFlowTheme.of(context).primary,
+                      ),
+                    ),
+                  ),
+                );
+              }
+              List<CustomersRow> syncfusionFlutterDataGridCustomersRowList =
+                  snapshot.data!;
+              return Container(
                 width: double.infinity,
-                height: 600.0,
+                height: double.infinity,
                 child: custom_widgets.SyncfusionFlutterDataGrid(
                   width: double.infinity,
-                  height: 600.0,
+                  height: double.infinity,
+                  customers: syncfusionFlutterDataGridCustomersRowList,
                 ),
-              ),
-            ],
+              );
+            },
           ),
         ),
       ),
