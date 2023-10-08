@@ -1,32 +1,34 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'horizontal_data_table_model.dart';
-export 'horizontal_data_table_model.dart';
+import 'syncfusion_flutter_datagrid_cloud_model.dart';
+export 'syncfusion_flutter_datagrid_cloud_model.dart';
 
-class HorizontalDataTableWidget extends StatefulWidget {
-  const HorizontalDataTableWidget({Key? key}) : super(key: key);
+class SyncfusionFlutterDatagridCloudWidget extends StatefulWidget {
+  const SyncfusionFlutterDatagridCloudWidget({Key? key}) : super(key: key);
 
   @override
-  _HorizontalDataTableWidgetState createState() =>
-      _HorizontalDataTableWidgetState();
+  _SyncfusionFlutterDatagridCloudWidgetState createState() =>
+      _SyncfusionFlutterDatagridCloudWidgetState();
 }
 
-class _HorizontalDataTableWidgetState extends State<HorizontalDataTableWidget> {
-  late HorizontalDataTableModel _model;
+class _SyncfusionFlutterDatagridCloudWidgetState
+    extends State<SyncfusionFlutterDatagridCloudWidget> {
+  late SyncfusionFlutterDatagridCloudModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => HorizontalDataTableModel());
+    _model = createModel(context, () => SyncfusionFlutterDatagridCloudModel());
 
     logFirebaseEvent('screen_view',
-        parameters: {'screen_name': 'horizontal_data_table'});
+        parameters: {'screen_name': 'syncfusion_flutter_datagridCloud'});
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -51,13 +53,24 @@ class _HorizontalDataTableWidgetState extends State<HorizontalDataTableWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              '49olfjic' /* Page Title */,
+              '90wk3wod' /* syncfusion_flutter_datagrid */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium,
           ),
           actions: [],
           centerTitle: false,
           elevation: 0.0,
+        ),
+        body: SafeArea(
+          top: true,
+          child: Container(
+            width: double.infinity,
+            height: double.infinity,
+            child: custom_widgets.SyncfusionFlutterDataGridCloud(
+              width: double.infinity,
+              height: double.infinity,
+            ),
+          ),
         ),
       ),
     );

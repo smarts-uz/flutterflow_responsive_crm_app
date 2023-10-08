@@ -1,2 +1,3 @@
 export 'syncfusion_flutter_data_grid.dart' show SyncfusionFlutterDataGrid;
-export 'custom_horizontal_data_table.dart' show CustomHorizontalDataTable;
+export 'syncfusion_flutter_data_grid_cloud.dart'
+    show SyncfusionFlutterDataGridCloud;

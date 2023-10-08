@@ -1,13 +1,15 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'horizontal_data_table_widget.dart' show HorizontalDataTableWidget;
+import '/custom_code/widgets/index.dart' as custom_widgets;
+import 'syncfusion_flutter_datagrid_cloud_widget.dart'
+    show SyncfusionFlutterDatagridCloudWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class HorizontalDataTableModel
-    extends FlutterFlowModel<HorizontalDataTableWidget> {
+class SyncfusionFlutterDatagridCloudModel
+    extends FlutterFlowModel<SyncfusionFlutterDatagridCloudWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

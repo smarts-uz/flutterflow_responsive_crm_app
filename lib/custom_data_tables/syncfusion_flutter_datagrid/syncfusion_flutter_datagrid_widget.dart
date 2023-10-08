@@ -83,7 +83,8 @@ class _SyncfusionFlutterDatagridWidgetState
                   ),
                 );
               }
-              List<CustomersRow> syncfusionFlutterDataGridCustomersRowList =
+              List<CustomersRow>
+                  syncfusionFlutterDataGridCloudCustomersRowList =
                   snapshot.data!;
               return Container(
                 width: double.infinity,
@@ -91,7 +92,7 @@ class _SyncfusionFlutterDatagridWidgetState
                 child: custom_widgets.SyncfusionFlutterDataGrid(
                   width: double.infinity,
                   height: double.infinity,
-                  customers: syncfusionFlutterDataGridCustomersRowList,
+                  customers: syncfusionFlutterDataGridCloudCustomersRowList,
                 ),
               );
             },

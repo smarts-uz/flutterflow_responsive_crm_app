@@ -53,23 +53,27 @@ class _SyncfusionFlutterDataGridState extends State<SyncfusionFlutterDataGrid> {
       width: widget.width,
       height: widget.height,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          TextField(
-            controller: searchController,
-            onChanged: (value) {
-              List<CustomersRow> sortedCustomers = customers.where(
-                (customer) {
-                  return customer.name!.toLowerCase().contains(
-                        value.toLowerCase(),
-                      );
-                },
-              ).toList();
-              setState(() {
-                customersDataSource = CustomersDataSource(
-                  customersData: sortedCustomers,
-                );
-              });
-            },
+          SizedBox(
+            height: 45,
+            child: TextField(
+              controller: searchController,
+              onChanged: (value) {
+                List<CustomersRow> sortedCustomers = customers.where(
+                  (customer) {
+                    return customer.name!.toLowerCase().contains(
+                          value.toLowerCase(),
+                        );
+                  },
+                ).toList();
+                setState(() {
+                  customersDataSource = CustomersDataSource(
+                    customersData: sortedCustomers,
+                  );
+                });
+              },
+            ),
           ),
           SfDataGridTheme(
             data: SfDataGridThemeData(

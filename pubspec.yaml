@@ -53,7 +53,6 @@ dependencies:
   google_fonts: 4.0.3
   gotrue: 1.11.0
   hive: 2.2.3
-  horizontal_data_table: ^4.3.1
   intl: 0.18.0
   json_path: 0.6.2
   mime_type: 1.0.0
@@ -67,7 +66,7 @@ dependencies:
   pin_code_fields: 7.4.0
   plugin_platform_interface: 2.1.3
   postgrest: 1.3.2
-  provider: ^6.0.5
+  provider: 6.0.4
   realtime_client: 1.1.1
   shared_preferences: 2.0.15
   shared_preferences_android: 2.1.0
