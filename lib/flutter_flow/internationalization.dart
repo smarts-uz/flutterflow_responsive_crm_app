@@ -2381,6 +2381,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': '',
     },
   },
+  // horizontal_data_table
+  {
+    'y78o24en': {
+      'en': 'Page Title',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
+    '50grp4kw': {
+      'en': 'Home',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
+  },
   // modal_success
   {
     'kred63vb': {

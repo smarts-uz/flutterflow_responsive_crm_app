@@ -117,7 +117,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'syncfusion_flutter_datagrid';
+  String _currentPageName = 'horizontal_data_table';
   late Widget? _currentPage;
 
   @override
@@ -137,6 +137,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'Main_profilePage': MainProfilePageWidget(),
       'Main_companiesList': MainCompaniesListWidget(),
       'syncfusion_flutter_datagrid': SyncfusionFlutterDatagridWidget(),
+      'horizontal_data_table': HorizontalDataTableWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -252,6 +253,16 @@ class _NavBarPageState extends State<NavBarPage> {
               ),
               label: FFLocalizations.of(context).getText(
                 'trzk1qup' /* DataTable */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_outlined,
+                size: 24.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                '50grp4kw' /* Home */,
               ),
               tooltip: '',
             )

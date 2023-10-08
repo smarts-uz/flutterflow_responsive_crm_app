@@ -202,6 +202,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'syncfusion_flutter_datagrid')
                   : SyncfusionFlutterDatagridWidget(),
+            ),
+            FFRoute(
+              name: 'horizontal_data_table',
+              path: 'horizontalDataTable',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'horizontal_data_table')
+                  : HorizontalDataTableWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

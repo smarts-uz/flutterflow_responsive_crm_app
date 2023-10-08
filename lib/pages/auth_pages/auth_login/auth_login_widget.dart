@@ -634,7 +634,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       }
 
                                       context.goNamedAuth(
-                                          'syncfusion_flutter_datagrid',
+                                          'horizontal_data_table',
                                           context.mounted);
                                     },
                                     text: FFLocalizations.of(context).getText(
