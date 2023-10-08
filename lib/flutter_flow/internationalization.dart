@@ -2383,7 +2383,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // horizontal_data_table
   {
-    'y78o24en': {
+    '49olfjic': {
       'en': 'Page Title',
       'bn': '',
       'hi': '',
@@ -2393,7 +2393,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
-    '50grp4kw': {
+    'r4b36g4v': {
       'en': 'Home',
       'bn': '',
       'hi': '',

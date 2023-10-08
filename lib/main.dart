@@ -117,7 +117,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'horizontal_data_table';
+  String _currentPageName = 'syncfusion_flutter_datagrid';
   late Widget? _currentPage;
 
   @override
@@ -262,7 +262,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 size: 24.0,
               ),
               label: FFLocalizations.of(context).getText(
-                '50grp4kw' /* Home */,
+                'r4b36g4v' /* Home */,
               ),
               tooltip: '',
             )

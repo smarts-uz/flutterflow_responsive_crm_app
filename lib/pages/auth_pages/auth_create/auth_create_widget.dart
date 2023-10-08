@@ -656,7 +656,8 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                   }
 
                                   context.goNamedAuth(
-                                      'horizontal_data_table', context.mounted);
+                                      'syncfusion_flutter_datagrid',
+                                      context.mounted);
                                 },
                                 text: FFLocalizations.of(context).getText(
                                   '29ut49wi' /* Create Account */,

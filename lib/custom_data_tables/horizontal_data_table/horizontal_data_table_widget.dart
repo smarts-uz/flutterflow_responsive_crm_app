@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -52,24 +51,13 @@ class _HorizontalDataTableWidgetState extends State<HorizontalDataTableWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              'y78o24en' /* Page Title */,
+              '49olfjic' /* Page Title */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium,
           ),
           actions: [],
           centerTitle: false,
           elevation: 0.0,
-        ),
-        body: SafeArea(
-          top: true,
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            child: custom_widgets.CustomHorizontalDataTable(
-              width: double.infinity,
-              height: double.infinity,
-            ),
-          ),
         ),
       ),
     );

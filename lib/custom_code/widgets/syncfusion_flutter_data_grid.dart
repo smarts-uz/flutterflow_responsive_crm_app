@@ -32,6 +32,7 @@ class SyncfusionFlutterDataGrid extends StatefulWidget {
 class _SyncfusionFlutterDataGridState extends State<SyncfusionFlutterDataGrid> {
   late List<CustomersRow> customers;
   late CustomersDataSource customersDataSource;
+  final TextEditingController searchController = TextEditingController();
 
   @override
   void initState() {
@@ -41,79 +42,107 @@ class _SyncfusionFlutterDataGridState extends State<SyncfusionFlutterDataGrid> {
   }
 
   @override
+  void dispose() {
+    searchController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       width: widget.width,
       height: widget.height,
-      child: SfDataGridTheme(
-        data: SfDataGridThemeData(
-          sortIcon: Builder(
-            builder: (context) {
-              Widget? icon;
-              String columnName = '';
-              context.visitAncestorElements((element) {
-                if (element is GridHeaderCellElement) {
-                  columnName = element.column.columnName;
-                }
-                return true;
+      child: Column(
+        children: [
+          TextField(
+            controller: searchController,
+            onChanged: (value) {
+              List<CustomersRow> sortedCustomers = customers.where(
+                (customer) {
+                  return customer.name!.toLowerCase().contains(
+                        value.toLowerCase(),
+                      );
+                },
+              ).toList();
+              setState(() {
+                customersDataSource = CustomersDataSource(
+                  customersData: sortedCustomers,
+                );
               });
-              var column = customersDataSource.sortedColumns
-                  .where((element) => element.name == columnName)
-                  .firstOrNull;
-              if (column != null) {
-                if (column.sortDirection == DataGridSortDirection.ascending) {
-                  icon = const Icon(Icons.arrow_upward_rounded, size: 16);
-                } else if (column.sortDirection ==
-                    DataGridSortDirection.descending) {
-                  icon = const Icon(Icons.arrow_downward_rounded, size: 16);
-                }
-              }
-              return icon ?? const SizedBox();
             },
           ),
-        ),
-        child: SfDataGrid(
-          source: customersDataSource,
-          allowSorting: true,
-          columns: <GridColumn>[
-            GridColumn(
-                columnName: 'id',
-                label: Container(
-                    padding: EdgeInsets.all(16.0),
-                    alignment: Alignment.center,
-                    child: Text(
-                      'ID',
-                    ))),
-            GridColumn(
-                columnName: 'name',
-                columnWidthMode: ColumnWidthMode.lastColumnFill,
-                label: Container(
-                    padding: EdgeInsets.all(8.0),
-                    alignment: Alignment.center,
-                    child: Text('Name'))),
-            GridColumn(
-                columnName: 'title',
-                label: Container(
-                    padding: EdgeInsets.all(8.0),
-                    alignment: Alignment.center,
-                    child: Text('Title'))),
-            GridColumn(
-                columnName: 'company',
-                label: Container(
-                    padding: EdgeInsets.all(8.0),
-                    alignment: Alignment.center,
-                    child: Text(
-                      'Company',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
-            GridColumn(
-                columnName: 'status',
-                label: Container(
-                    padding: EdgeInsets.all(8.0),
-                    alignment: Alignment.center,
-                    child: Text('Status'))),
-          ],
-        ),
+          SfDataGridTheme(
+            data: SfDataGridThemeData(
+              sortIcon: Builder(
+                builder: (context) {
+                  Widget? icon;
+                  String columnName = '';
+                  context.visitAncestorElements((element) {
+                    if (element is GridHeaderCellElement) {
+                      columnName = element.column.columnName;
+                    }
+                    return true;
+                  });
+                  var column = customersDataSource.sortedColumns
+                      .where((element) => element.name == columnName)
+                      .firstOrNull;
+                  if (column != null) {
+                    if (column.sortDirection ==
+                        DataGridSortDirection.ascending) {
+                      icon = const Icon(Icons.arrow_upward_rounded, size: 16);
+                    } else if (column.sortDirection ==
+                        DataGridSortDirection.descending) {
+                      icon = const Icon(Icons.arrow_downward_rounded, size: 16);
+                    }
+                  }
+                  return icon ?? const SizedBox();
+                },
+              ),
+            ),
+            child: SfDataGrid(
+              source: customersDataSource,
+              allowSorting: true,
+              columns: <GridColumn>[
+                GridColumn(
+                    columnName: 'id',
+                    label: Container(
+                        padding: EdgeInsets.all(16.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'ID',
+                        ))),
+                GridColumn(
+                    columnName: 'name',
+                    columnWidthMode: ColumnWidthMode.lastColumnFill,
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text('Name'))),
+                GridColumn(
+                    columnName: 'title',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text('Title'))),
+                GridColumn(
+                    columnName: 'company',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Company',
+                          overflow: TextOverflow.ellipsis,
+                        ))),
+                GridColumn(
+                    columnName: 'status',
+                    label: Container(
+                        padding: EdgeInsets.all(8.0),
+                        alignment: Alignment.center,
+                        child: Text('Status'))),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
