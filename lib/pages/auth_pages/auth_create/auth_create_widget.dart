@@ -656,7 +656,7 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                   }
 
                                   context.goNamedAuth(
-                                      'syncfusion_flutter_datagridCloud',
+                                      'syncfusion_flutter_datagrid',
                                       context.mounted);
                                 },
                                 text: FFLocalizations.of(context).getText(

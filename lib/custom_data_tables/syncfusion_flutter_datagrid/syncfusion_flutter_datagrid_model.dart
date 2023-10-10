@@ -11,6 +11,17 @@ import 'package:provider/provider.dart';
 
 class SyncfusionFlutterDatagridModel
     extends FlutterFlowModel<SyncfusionFlutterDatagridWidget> {
+  ///  Local state fields for this page.
+
+  List<CustomersRow> customers = [];
+  void addToCustomers(CustomersRow item) => customers.add(item);
+  void removeFromCustomers(CustomersRow item) => customers.remove(item);
+  void removeAtIndexFromCustomers(int index) => customers.removeAt(index);
+  void insertAtIndexInCustomers(int index, CustomersRow item) =>
+      customers.insert(index, item);
+  void updateCustomersAtIndex(int index, Function(CustomersRow) updateFn) =>
+      customers[index] = updateFn(customers[index]);
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
